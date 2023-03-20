@@ -6,7 +6,10 @@ import FontAwesome, {
   parseIconFromClassName,
 } from 'react-native-fontawesome';
 
-import Icon from 'react-native-vector-icons/FontAwesome5'
+import Icon1 from 'react-native-vector-icons/FontAwesome5';
+import Icon2 from 'react-native-vector-icons/Ionicons'
+import Icon3 from 'react-native-vector-icons/Foundation'
+import Icon4 from 'react-native-vector-icons/FontAwesome'
 
 // import all the components we are going to use
 import {
@@ -17,6 +20,7 @@ import {
   FlatList,
   TextInput,
   Image,
+  Button
 } from 'react-native';
 
 const HomeScreen = () => {
@@ -92,7 +96,7 @@ const HomeScreen = () => {
   // };
 {/*, justifyContent: 'space-between',*/}
   return (
-    <SafeAreaView style={{flex: 1, backgroundColor: "#D1FFFE", alignContent: 'stretch'}}>
+    <SafeAreaView style={{flex: 1, backgroundColor: "#EFFEFF"}}>
       <View style={styles.navigationBar}>
         <Text style={{marginTop: 50, marginBottom: 25, fontSize: 33, color: 'white', alignSelf: 'center'}}>
             Welcome to the home page
@@ -108,41 +112,57 @@ const HomeScreen = () => {
           // value={search}
           underlineColorAndroid="transparent"
           placeholder="🔍Search"
-          placeholderTextColor='white'
+          placeholderTextColor='#D9D9D9'
         />
       </View>
       <Image 
         style={styles.imageStyle}
-        source={require('../../assets/images/strong-man-training-gym.jpg')}
+        source={require('../../assets/images/SmartGym.png')}
       />
       <View style={{flex: 3, flexDirection: 'row', alignSelf: 'flex-end'}}>
         <View style={styles.containerBox}>
-          <Icon name="calendar-alt" style={styles.iconStyle}/>
-          <Text style={styles.textBox}>Training History</Text>
-          <Icon name="calendar-alt" style={styles.iconStyle}/>
-          <Text style={styles.textBox}>Training History</Text>
-        </View>
-        <View style={styles.containerBox}>
-          <Icon name="calendar-alt" style={styles.iconStyle}/>
+          <Icon1 name="calendar-alt" style={styles.iconStyle}/>
           <View style={styles.textBox}>
             <Text style={styles.textStyle}>Training</Text>
             <Text style={styles.textStyle}>History</Text>
           </View>
-          <Icon name="calendar-alt" style={styles.iconStyle}/>
-          <Text style={styles.textBox}>Training History</Text>
+          <Icon1 name="dumbbell" style={styles.iconStyle}/>
+          <View style={styles.textBox}>
+            <Text style={styles.textStyle}>Levels of</Text>
+            <Text style={styles.textStyle}>Training</Text>
+          </View>
         </View>
         <View style={styles.containerBox}>
-          <Icon name="calendar-alt" style={styles.iconStyle}/>
-          <Text style={styles.textBox}>Training History</Text>
+            <Icon3 name="clipboard-notes" style={styles.iconStyle}/>
+            <View style={styles.textBox}>
+              <Text style={styles.textStyle}>My</Text>
+              <Text style={styles.textStyle}>Exercises</Text>
+            </View>
+          <Icon4 name="user-circle" style={styles.iconStyle}/>
+          <View style={styles.textBox}>
+            <Text style={styles.textStyle}>Personal</Text>
+            <Text style={styles.textStyle}>Information</Text>
+          </View>
+        </View>
+        <View style={styles.containerBox}>
+          <Icon2 name="information-circle" style={styles.iconStyle}/>
+          <View style={styles.textBox}>
+            <Text style={styles.textStyle}>Gym</Text>
+            <Text style={styles.textStyle}>Information</Text>
+          </View>
         </View>
       </View>
+      <Text style={styles.textHCMUT}>
+        <Text>powered by</Text>
+        <Text style={{fontWeight: "bold"}}> HCMUT</Text>
+      </Text>
     </SafeAreaView>
   );
 };
 
 const styles = StyleSheet.create({
   navigationBar: {
-    backgroundColor: '#3300C6',
+    backgroundColor: '#2F486D',
     height: "25%",
     borderBottomLeftRadius: 8,
     borderBottomRightRadius: 8,
@@ -150,16 +170,17 @@ const styles = StyleSheet.create({
   container: {
     width: "90%",
     alignSelf: "center",
-    backgroundColor: '#C1FDFF',
+    backgroundColor: '#EFFEFF',
   },
   imageStyle: {
     alignSelf: 'center',
-    height: 200,
-    width: "75%",
+    height: 150,
+    width: "65%",
   },
   iconStyle: {
-    fontSize: 70,
+    fontSize: 60,
     marginTop: 20,
+    marginBottom: 20,
     color: 'black',
   },
   textBox: {
@@ -173,22 +194,26 @@ const styles = StyleSheet.create({
   },
   textStyle: {
     fontWeight: 'bold',
-    // fontSize
+    fontSize: 12,
   },
   textInputStyle: {
-    height: 50,
+    height: 40,
     borderWidth: 1,
-    margin: 5,
+    margin: 10,
     borderColor: 'black',
-    backgroundColor: '#3300C6',
-    borderRadius: 10,
+    backgroundColor: '#2F486D',
+    borderRadius: 20,
     textAlign: 'center',
-    color: 'white'
+    color: '#BEBEBE'
   },
   containerBox: {
     flex: 1, 
-    alignItems: 'center'
+    alignItems: 'center',
   },
+  textHCMUT: {
+    alignSelf: 'center',
+    color: '#1976D2'
+  }
 });
 
 export default HomeScreen;
