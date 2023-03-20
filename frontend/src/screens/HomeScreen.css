@@ -1,0 +1,35 @@
+/* import { StyleSheet } from 'react-native';
+
+
+const styles = StyleSheet.create({
+    navigationBar: {
+      backgroundColor: '#3300C6',
+      height: "25%",
+      borderBottomLeftRadius: 8,
+      borderBottomRightRadius: 8,
+    },
+    container: {
+      width: "90%",
+      alignSelf: "center",
+      backgroundColor: '#C1FDFF',
+    },
+    imageStyle: {
+      height: 200,
+      width: "100%",
+    },
+    iconStyle: {
+      fontSize: 40,
+      marginTop: 30,
+      color: 'black',
+    },
+    textInputStyle: {
+      height: 50,
+      borderWidth: 1,
+      margin: 5,
+      borderColor: 'black',
+      backgroundColor: '#3300C6',
+      borderRadius: 10,
+      textAlign: 'center',
+      color: 'white'
+    },
+  }); */
