@@ -1,10 +1,4 @@
 import React, {useState, useEffect} from 'react';
-import FontAwesome, {
-  SolidIcons,
-  RegularIcons,
-  BrandIcons,
-  parseIconFromClassName,
-} from 'react-native-fontawesome';
 
 import Icon1 from 'react-native-vector-icons/FontAwesome5';
 import Icon2 from 'react-native-vector-icons/Ionicons'
@@ -17,13 +11,14 @@ import {
   Text,
   StyleSheet,
   View,
-  FlatList,
+  // FlatList,
   TextInput,
   Image,
-  Button
+  // Button,
+  TouchableOpacity
 } from 'react-native';
 
-const HomeScreen = () => {
+const HomeScreen = ({navigation}) => {
   // const [search, setSearch] = useState('');
   // const [filteredDataSource, setFilteredDataSource] = useState([]);
   // const [masterDataSource, setMasterDataSource] = useState([]);
@@ -98,10 +93,10 @@ const HomeScreen = () => {
   return (
     <SafeAreaView style={{flex: 1, backgroundColor: "#EFFEFF"}}>
       <View style={styles.navigationBar}>
-        <Text style={{marginTop: 50, marginBottom: 25, fontSize: 33, color: 'white', alignSelf: 'center'}}>
+        <Text style={styles.textWelcome}>
             Welcome to the home page
         </Text>
-        <Text style={{fontSize: 13, color: 'white', alignSelf: 'center'}}>
+        <Text style={styles.textIntro}>
             Here's where we provide you amazing features of the app
         </Text>
       </View>
@@ -121,35 +116,45 @@ const HomeScreen = () => {
       />
       <View style={{flex: 3, flexDirection: 'row', alignSelf: 'flex-end'}}>
         <View style={styles.containerBox}>
-          <Icon1 name="calendar-alt" style={styles.iconStyle}/>
-          <View style={styles.textBox}>
-            <Text style={styles.textStyle}>Training</Text>
-            <Text style={styles.textStyle}>History</Text>
-          </View>
-          <Icon1 name="dumbbell" style={styles.iconStyle}/>
-          <View style={styles.textBox}>
-            <Text style={styles.textStyle}>Levels of</Text>
-            <Text style={styles.textStyle}>Training</Text>
-          </View>
+          <TouchableOpacity style={styles.opcaityStyle} onPress={() => navigation.push('HistoryScreen')}>
+            <Icon1 name="calendar-alt" style={styles.iconStyle}/>
+            <View style={styles.textBox}>
+              <Text style={styles.textStyle}>Training</Text>
+              <Text style={styles.textStyle}>History</Text>
+            </View>
+          </TouchableOpacity>
+          <TouchableOpacity style={styles.opcaityStyle}>
+            <Icon1 name="dumbbell" style={styles.iconStyle}/>
+            <View style={styles.textBox}>
+              <Text style={styles.textStyle}>Levels of</Text>
+              <Text style={styles.textStyle}>Training</Text>
+            </View>
+          </TouchableOpacity>
         </View>
         <View style={styles.containerBox}>
-            <Icon3 name="clipboard-notes" style={styles.iconStyle}/>
+          <TouchableOpacity style={styles.opcaityStyle}>
+            <Icon3 name="clipboard-notes" style={[styles.iconStyle, {fontSize: 64}]}/>
             <View style={styles.textBox}>
               <Text style={styles.textStyle}>My</Text>
               <Text style={styles.textStyle}>Exercises</Text>
+            </View>            
+          </TouchableOpacity>
+          <TouchableOpacity style={styles.opcaityStyle}>
+            <Icon4 name="user-circle" style={styles.iconStyle}/>
+            <View style={styles.textBox}>
+              <Text style={styles.textStyle}>Personal</Text>
+              <Text style={styles.textStyle}>Information</Text>
             </View>
-          <Icon4 name="user-circle" style={styles.iconStyle}/>
-          <View style={styles.textBox}>
-            <Text style={styles.textStyle}>Personal</Text>
-            <Text style={styles.textStyle}>Information</Text>
-          </View>
+            </TouchableOpacity>
         </View>
         <View style={styles.containerBox}>
-          <Icon2 name="information-circle" style={styles.iconStyle}/>
-          <View style={styles.textBox}>
-            <Text style={styles.textStyle}>Gym</Text>
-            <Text style={styles.textStyle}>Information</Text>
-          </View>
+          <TouchableOpacity style={styles.opcaityStyle}>
+            <Icon2 name="information-circle" style={styles.iconStyle}/>
+            <View style={styles.textBox}>
+              <Text style={styles.textStyle}>Gym</Text>
+              <Text style={styles.textStyle}>Information</Text>               
+            </View>       
+          </TouchableOpacity>
         </View>
       </View>
       <Text style={styles.textHCMUT}>
@@ -160,42 +165,56 @@ const HomeScreen = () => {
   );
 };
 
+export default HomeScreen;
+
 const styles = StyleSheet.create({
+  container: {
+    width: "90%",
+    alignSelf: "center",
+    backgroundColor: '#EFFEFF',
+  },
+  containerBox: {
+    flex: 1, 
+    alignItems: 'center',
+  },
+  imageStyle: {
+    alignSelf: 'center',
+    height: 150,
+    width: "65%",
+    marginBottom: 10,
+  },
+  iconStyle: {
+    fontSize: 60,
+    // marginTop: 10,
+    marginBottom: 10,
+    color: 'black',
+  },
   navigationBar: {
     backgroundColor: '#2F486D',
     height: "25%",
     borderBottomLeftRadius: 8,
     borderBottomRightRadius: 8,
   },
-  container: {
-    width: "90%",
-    alignSelf: "center",
-    backgroundColor: '#EFFEFF',
-  },
-  imageStyle: {
-    alignSelf: 'center',
-    height: 150,
-    width: "65%",
-  },
-  iconStyle: {
-    fontSize: 60,
-    marginTop: 20,
-    marginBottom: 20,
-    color: 'black',
+  opcaityStyle: {
+    alignItems: 'center',
+    marginBottom: 0,
   },
   textBox: {
-    height: '15%',
-    width: '75%',
+    height: '30%',
+    width: 100,
     backgroundColor: '#ECECEC',
     borderRadius: 20,
     alignItems: 'center',
     color: 'black',
     fontWeight: 'bold',
-  },
-  textStyle: {
-    fontWeight: 'bold',
-    fontSize: 12,
-  },
+    // alignContent: 'center',
+    // textAlign: 'center',
+    justifyContent: 'center',
+  },  
+  textHCMUT: {
+    alignSelf: 'center',
+    color: '#1976D2',
+  },  
   textInputStyle: {
     height: 40,
     borderWidth: 1,
@@ -205,15 +224,23 @@ const styles = StyleSheet.create({
     borderRadius: 20,
     textAlign: 'center',
     color: '#BEBEBE'
-  },
-  containerBox: {
-    flex: 1, 
-    alignItems: 'center',
-  },
-  textHCMUT: {
+  },  
+  textIntro: {
+    fontSize: 13, 
+    color: 'white', 
     alignSelf: 'center',
-    color: '#1976D2'
-  }
+  },
+  textStyle: {
+    fontWeight: 'bold',
+    fontSize: 12,
+    // textAlign: 'center',
+    // justifyContent: 'center',
+  },
+  textWelcome: {
+    marginTop: 50, 
+    marginBottom: 25, 
+    fontSize: 33, 
+    color: 'white', 
+    alignSelf: 'center',
+  },
 });
-
-export default HomeScreen;
