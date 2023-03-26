@@ -132,7 +132,7 @@ const HomeScreen = ({navigation}) => {
           </TouchableOpacity>
         </View>
         <View style={styles.containerBox}>
-          <TouchableOpacity style={styles.opcaityStyle}>
+          <TouchableOpacity style={styles.opcaityStyle} onPress={() => navigation.push('Exercises')}>
             <Icon3 name="clipboard-notes" style={[styles.iconStyle, {fontSize: 64}]}/>
             <View style={styles.textBox}>
               <Text style={styles.textStyle}>My</Text>
