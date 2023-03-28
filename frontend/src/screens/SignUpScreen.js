@@ -2,20 +2,16 @@ import * as React from 'react';
 import { Button, TextInput, View, SafeAreaView, Image, StyleSheet, Text, Pressable } from 'react-native';
 import { AuthContext } from './utils';
 
-export function SignInScreen({ navigation }) {
+export function SignUpScreen({ navigation }) {
   const [username, setUsername] = React.useState('');
   const [password, setPassword] = React.useState('');
 
-  const { signIn } = React.useContext(AuthContext);
+  const { signUp } = React.useContext(AuthContext);
 
   return (
     <SafeAreaView style={{ flex: 2, backgroundColor: 'white' }}>
-      <View style={styles.backgroundStyle}>
-        <Image style={styles.imageStyle} source={require('../../assets/images/SmartGym.png')} />
-        <Text style={styles.textStyle}>SMART GYM version 1.0</Text>
-      </View>
       <View style={styles.container}>
-        <View style={styles.containerBox}>
+        <View style={[styles.containerBox, { marginTop: 50 }]}>
           <Text style={styles.textStyle2}>Username:</Text>
           <View style={styles.textBox}>
             <TextInput
@@ -40,13 +36,25 @@ export function SignInScreen({ navigation }) {
             />
           </View>
         </View>
-        <Pressable style={styles.buttonStyle} onPress={() => signIn({ username, password })}>
-          <Text style={styles.signinStyle}>SIGN IN</Text>
-        </Pressable>
-        <Pressable style={styles.buttonStyle} onPress={() => navigation.push('SignUpScreen')}>
+        <View style={styles.containerBox}>
+          <Text style={styles.textStyle2}>Confirm Password:</Text>
+          <View style={styles.textBox}>
+            <TextInput
+              value={password}
+              onChangeText={setPassword}
+              secureTextEntry
+              style={{ margin: 10 }}
+              placeholder='Confirm Password'
+              placeholderTextColor='#BEBEBE'
+            />
+          </View>
+        </View>
+        <Pressable style={styles.buttonStyle} onPress={() => signUp({ username, password })}>
           <Text style={styles.signinStyle}>SIGN UP</Text>
         </Pressable>
-        <Text style={styles.textStyle3}>Forgotten Password?</Text>
+        <Pressable onPress={() => navigation.popToTop()}>
+          <Text style={styles.textStyle3}>Already got an account? SIGN IN!</Text>
+        </Pressable>
       </View>
       <Text style={styles.textHCMUT}>
         <Text>powered by</Text>
@@ -58,39 +66,26 @@ export function SignInScreen({ navigation }) {
 }
 
 const styles = StyleSheet.create({
-  backgroundStyle: {
-    flex: 1,
-    backgroundColor: '#2F486D',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
   buttonStyle: {
     backgroundColor: '#59A3EC',
     color: 'black',
     borderRadius: 15,
     justifyContent: 'center',
     height: 50,
-    // margin: 20,
-    marginTop: 10,
+    marginTop: 80,
+    marginBottom: 20,
   },
   container: {
     flex: 1,
     alignSelf: 'center',
   },
   containerBox: {
-    margin: 10,
+    margin: 15,
   },
   signinStyle: {
     color: 'black',
     fontSize: 20,
     textAlign: 'center',
-  },
-  imageStyle: {
-    position: 'absolute',
-    height: '35%',
-    width: '55%',
-    borderColor: 'black',
-    borderWidth: 1,
   },
   textBox: {
     borderBottomWidth: 1,
@@ -119,7 +114,7 @@ const styles = StyleSheet.create({
   },
   textStyle3: {
     color: '#939393',
-    fontSize: 15,
+    fontSize: 17,
     textDecorationLine: 'underline',
     textAlign: 'center',
     margin: 10,

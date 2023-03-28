@@ -8,7 +8,7 @@ import { AuthContext } from './src/screens/utils';
 // import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 // import { assets } from './react-native.config'
 
-import { SignInScreen, SplashScreen, HomeScreen, HistoryScreen, ExercisesScreen, GymScreen } from './src/screens';
+import { SignInScreen, SignUpScreen, SplashScreen, HomeScreen, HistoryScreen, ExercisesScreen, GymScreen } from './src/screens';
 
 import MuscleGroups from './src/screens/Exercises/MuscleGroups'
 import Chest from './src/screens/Exercises/Chest/Chest'
@@ -19,8 +19,7 @@ import Shoulders from './src/screens/Exercises/Shoulders/Shoulders'
 import Legs from './src/screens/Exercises/Legs/Legs'
 import Abs from './src/screens/Exercises/Abs/Abs'
 import Cardio from './src/screens/Exercises/Cardio/Cardio'
-import { AsyncStorage } from 'react-native';
-
+import * as SecureStore from 'expo-secure-store';
 
 const Stack = createNativeStackNavigator();
 // const Tab = createBottomTabNavigator();
@@ -145,7 +144,8 @@ export default function App() {
           };
         case 'SIGN_IN':
           if (action.token) {
-            AsyncStorage.setItem('userToken', action.token);
+            // console.log(action.token)
+            SecureStore.setItemAsync('userToken', 'action.token');
           }
           return {
             ...prevState,
@@ -153,7 +153,7 @@ export default function App() {
             userToken: action.token,
           };
         case 'SIGN_OUT':
-          AsyncStorage.removeItem('userToken');
+          SecureStore.deleteItemAsync('userToken');
           return {
             ...prevState,
             isSignout: true,
@@ -175,9 +175,10 @@ export default function App() {
 
       try {
         // Restore token stored in `SecureStore` or any other encrypted storage
-        // userToken = await SecureStore.getItemAsync('userToken');
+        userToken = await SecureStore.getItemAsync('userToken');
       } catch (e) {
         // Restoring token failed
+        // console.log('Token Failed')
       }
 
       // After restoring token, we may need to validate it in production apps
@@ -241,6 +242,17 @@ export default function App() {
                 options={{ headerShown: false }}
                 />
               )}
+              <Stack.Screen
+              name="SignUpScreen"
+              component={SignUpScreen}
+              options={{
+                headerStyle: { backgroundColor: "#2F486D", },
+                headerTintColor: 'white',
+                headerTitle: 'SIGN UP',
+                headerTitleAlign: 'center',
+                headerBackVisible: false,
+              }}
+            />
               <Stack.Screen
               name="HistoryScreen"
               component={HistoryScreen}
