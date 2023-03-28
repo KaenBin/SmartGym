@@ -12,7 +12,7 @@ import {
   TouchableOpacity
 } from 'react-native';
 
-const ExerciseScreen = ({navigation}) => {
+export function ExercisesScreen ({navigation}) {
   // const [Exercises, setExercises] = useState([]);
 
   // function addExercisesHandler() {}
@@ -32,8 +32,6 @@ const ExerciseScreen = ({navigation}) => {
     </SafeAreaView>
   );
 };
-
-export default ExerciseScreen;
 
 const styles = StyleSheet.create({
   addContainer: {

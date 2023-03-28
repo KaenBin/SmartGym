@@ -23,7 +23,7 @@ const CalendarTheme = {
   todayTextColor: 'white',
 }
 
-const HistoryScreen = ({navigation}) => {
+export function HistoryScreen ({navigation}) {
   const [currentDate, setCurrentDate] = useState(moment()
      .utcOffset('+01:00')
      .format('YYYY-MM-DD'));
@@ -39,8 +39,6 @@ const HistoryScreen = ({navigation}) => {
     </SafeAreaView>
   );
 };
-
-export default HistoryScreen;
 
 const styles = StyleSheet.create({
   calendar: {
