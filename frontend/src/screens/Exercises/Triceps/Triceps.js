@@ -25,9 +25,9 @@ const MuscleGroups = ({ navigation }) => {
                     >
                         <Image
                             style={styles.imageStyle}
-                            source={require('../../../../assets/images/Chest/BenchPress.jpg')} />
+                            source={require('../../../../assets/images/Triceps/Dips.jpg')} />
                         <Text style={styles.textStyle}>
-                            Bench Press
+                            Dips
                         </Text>
 
                     </TouchableOpacity>
@@ -37,9 +37,9 @@ const MuscleGroups = ({ navigation }) => {
                     >
                         <Image
                             style={styles.imageStyle}
-                            source={require('../../../../assets/images/Chest/InclinePress.jpg')} />
+                            source={require('../../../../assets/images/Triceps/DumbbellTricepExtension.jpg')} />
                         <Text style={styles.textStyle}>
-                            Incline Press
+                            Dumbbell Tricep Extension
                         </Text>
 
                     </TouchableOpacity>
@@ -53,9 +53,9 @@ const MuscleGroups = ({ navigation }) => {
                     >
                         <Image
                             style={styles.imageStyle}
-                            source={require('../../../../assets/images/Chest/DeclinePress.jpg')} />
+                            source={require('../../../../assets/images/Triceps/DumbbellTricepKickback.jpg')} />
                         <Text style={styles.textStyle}>
-                            Decline Press
+                            Dumbbell Tricep Kickback
                         </Text>
 
                     </TouchableOpacity>
@@ -65,9 +65,9 @@ const MuscleGroups = ({ navigation }) => {
                     >
                         <Image
                             style={styles.imageStyle}
-                            source={require('../../../../assets/images/Chest/CableFly.jpg')} />
+                            source={require('../../../../assets/images/Triceps/LyingDumbbellTricepExtension.jpg')} />
                         <Text style={styles.textStyle}>
-                            Cable Fly
+                            Lying Dumbbell Tricep Extension
                         </Text>
 
                     </TouchableOpacity>
@@ -81,9 +81,9 @@ const MuscleGroups = ({ navigation }) => {
                     >
                         <Image
                             style={styles.imageStyle}
-                            source={require('../../../../assets/images/Chest/InclineFly.jpg')} />
+                            source={require('../../../../assets/images/Triceps/LyingTricepExtension.jpg')} />
                         <Text style={styles.textStyle}>
-                            Incline Fly
+                            Lying Tricep Extension
                         </Text>
 
                     </TouchableOpacity>
@@ -93,9 +93,9 @@ const MuscleGroups = ({ navigation }) => {
                     >
                         <Image
                             style={styles.imageStyle}
-                            source={require('../../../../assets/images/Chest/DumbellFly.jpg')} />
+                            source={require('../../../../assets/images/Triceps/ReverseGripTricepPushdown.jpg')} />
                         <Text style={styles.textStyle}>
-                            Dumbell Fly
+                            Reverse Grip Tricep Pushdown
                         </Text>
 
                     </TouchableOpacity>
@@ -109,9 +109,9 @@ const MuscleGroups = ({ navigation }) => {
                     >
                         <Image
                             style={styles.imageStyle}
-                            source={require('../../../../assets/images/Chest/ChestPress.jpg')} />
+                            source={require('../../../../assets/images/Triceps/SeatedDipMachine.jpg')} />
                         <Text style={styles.textStyle}>
-                            Chest Press
+                            Seated Dip Machine
                         </Text>
 
                     </TouchableOpacity>
@@ -121,14 +121,14 @@ const MuscleGroups = ({ navigation }) => {
                     >
                         <Image
                             style={styles.imageStyle}
-                            source={require('../../../../assets/images/Chest/MachineChessFly.jpg')} />
+                            source={require('../../../../assets/images/Triceps/TricepPushdown.jpg')} />
                         <Text style={styles.textStyle}>
-                            Machine Fly
+                            Tricep Pushdown
                         </Text>
 
                     </TouchableOpacity>
                 </View>
-                <View
+                {/* <View
                     style={styles.viewStyle}
                 >
                     <TouchableOpacity
@@ -155,7 +155,7 @@ const MuscleGroups = ({ navigation }) => {
                         </Text>
 
                     </TouchableOpacity>
-                </View>
+                </View> */}
             </ScrollView>
         </SafeAreaView>
     );
@@ -166,7 +166,7 @@ export default MuscleGroups;
 const styles = StyleSheet.create({
     groupContainer: {
         flex: 1,
-        height: 200,
+        height: 220,
         backgroundColor: 'white',
         borderColor: 'black',
         borderWidth: 1,
@@ -178,7 +178,7 @@ const styles = StyleSheet.create({
     },
     textStyle: {
         color: 'black',
-        fontSize: 25,
+        fontSize: 18,
         textAlign: 'center',
     },
     container: {

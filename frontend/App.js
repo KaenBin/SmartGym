@@ -18,7 +18,7 @@ import Triceps from './src/screens/Exercises/Triceps/Triceps'
 import Shoulders from './src/screens/Exercises/Shoulders/Shoulders'
 import Legs from './src/screens/Exercises/Legs/Legs'
 import Abs from './src/screens/Exercises/Abs/Abs'
-import Cardio from './src/screens/Exercises/Cardio/Cardio'
+import FullBody from './src/screens/Exercises/FullBody/FullBody'
 import * as SecureStore from 'expo-secure-store';
 
 const Stack = createNativeStackNavigator();
@@ -119,8 +119,8 @@ function Exercises() {
         }}
       />
       <Stack.Screen
-        name="Cardio"
-        component={Cardio}
+        name="Full Body"
+        component={FullBody}
         options={{
           headerStyle: { backgroundColor: "#2F486D", },
           headerTintColor: 'white',
