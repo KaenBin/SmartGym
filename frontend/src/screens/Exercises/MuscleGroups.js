@@ -95,14 +95,14 @@ const MuscleGroups = ({navigation}) => {
         </TouchableOpacity>
         <TouchableOpacity 
           style={styles.groupContainer}
-          onPress={() => navigation.push('Cardio')}
+          onPress={() => navigation.push('Full Body')}
         >
           <Text style={styles.textStyle}>
-            Cardio
+            Full Body
           </Text>
           <Image 
             style={styles.imageStyle} 
-            source={require('../../../assets/images/Cardio.jpg')} />
+            source={require('../../../assets/images/FullBody.jpg')} />
         </TouchableOpacity>
       </ScrollView>
     </SafeAreaView>

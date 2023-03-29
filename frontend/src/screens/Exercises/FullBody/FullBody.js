@@ -25,9 +25,9 @@ const MuscleGroups = ({ navigation }) => {
                     >
                         <Image
                             style={styles.imageStyle}
-                            source={require('../../../../assets/images/Chest/BenchPress.jpg')} />
+                            source={require('../../../../assets/images/FullBody/Burpees.jpg')} />
                         <Text style={styles.textStyle}>
-                            Bench Press
+                            Burpees
                         </Text>
 
                     </TouchableOpacity>
@@ -37,9 +37,9 @@ const MuscleGroups = ({ navigation }) => {
                     >
                         <Image
                             style={styles.imageStyle}
-                            source={require('../../../../assets/images/Chest/InclinePress.jpg')} />
+                            source={require('../../../../assets/images/FullBody/Deadlift.jpg')} />
                         <Text style={styles.textStyle}>
-                            Incline Press
+                            Deadlift
                         </Text>
 
                     </TouchableOpacity>
@@ -53,9 +53,9 @@ const MuscleGroups = ({ navigation }) => {
                     >
                         <Image
                             style={styles.imageStyle}
-                            source={require('../../../../assets/images/Chest/DeclinePress.jpg')} />
+                            source={require('../../../../assets/images/FullBody/DumbbellDeadlift.jpg')} />
                         <Text style={styles.textStyle}>
-                            Decline Press
+                            Dumbbell Deadlift
                         </Text>
 
                     </TouchableOpacity>
@@ -65,9 +65,9 @@ const MuscleGroups = ({ navigation }) => {
                     >
                         <Image
                             style={styles.imageStyle}
-                            source={require('../../../../assets/images/Chest/CableFly.jpg')} />
+                            source={require('../../../../assets/images/FullBody/DumbbellSnatch.jpg')} />
                         <Text style={styles.textStyle}>
-                            Cable Fly
+                            Dumbbell Snatch
                         </Text>
 
                     </TouchableOpacity>
@@ -81,9 +81,9 @@ const MuscleGroups = ({ navigation }) => {
                     >
                         <Image
                             style={styles.imageStyle}
-                            source={require('../../../../assets/images/Chest/InclineFly.jpg')} />
+                            source={require('../../../../assets/images/FullBody/PowerClean.jpg')} />
                         <Text style={styles.textStyle}>
-                            Incline Fly
+                            Power Clean
                         </Text>
 
                     </TouchableOpacity>
@@ -93,9 +93,9 @@ const MuscleGroups = ({ navigation }) => {
                     >
                         <Image
                             style={styles.imageStyle}
-                            source={require('../../../../assets/images/Chest/DumbellFly.jpg')} />
+                            source={require('../../../../assets/images/FullBody/RackPull.jpg')} />
                         <Text style={styles.textStyle}>
-                            Dumbell Fly
+                            Rack Pull
                         </Text>
 
                     </TouchableOpacity>
@@ -109,9 +109,9 @@ const MuscleGroups = ({ navigation }) => {
                     >
                         <Image
                             style={styles.imageStyle}
-                            source={require('../../../../assets/images/Chest/ChestPress.jpg')} />
+                            source={require('../../../../assets/images/FullBody/SingleLegDumbbellDeadlift.jpg')} />
                         <Text style={styles.textStyle}>
-                            Chest Press
+                            Single Leg Dumbbell Deadlift
                         </Text>
 
                     </TouchableOpacity>
@@ -121,14 +121,14 @@ const MuscleGroups = ({ navigation }) => {
                     >
                         <Image
                             style={styles.imageStyle}
-                            source={require('../../../../assets/images/Chest/MachineChessFly.jpg')} />
+                            source={require('../../../../assets/images/FullBody/SumoDeadlift.jpg')} />
                         <Text style={styles.textStyle}>
-                            Machine Fly
+                            Sumo Deadlift
                         </Text>
 
                     </TouchableOpacity>
                 </View>
-                <View
+                {/* <View
                     style={styles.viewStyle}
                 >
                     <TouchableOpacity
@@ -155,7 +155,7 @@ const MuscleGroups = ({ navigation }) => {
                         </Text>
 
                     </TouchableOpacity>
-                </View>
+                </View> */}
             </ScrollView>
         </SafeAreaView>
     );
@@ -178,7 +178,7 @@ const styles = StyleSheet.create({
     },
     textStyle: {
         color: 'black',
-        fontSize: 25,
+        fontSize: 18,
         textAlign: 'center',
     },
     container: {
@@ -187,8 +187,8 @@ const styles = StyleSheet.create({
         marginBottom: 10,
     },
     imageStyle: {
-        height: '80%',
-        width: '90%',
+        height: '78%',
+        width: '92%',
         alignSelf: 'center',
     },
     viewStyle: {

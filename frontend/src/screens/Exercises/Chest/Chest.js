@@ -188,7 +188,7 @@ const styles = StyleSheet.create({
     },
     imageStyle: {
         height: '80%',
-        width: '90%',
+        width: '95%',
         alignSelf: 'center',
     },
     viewStyle: {

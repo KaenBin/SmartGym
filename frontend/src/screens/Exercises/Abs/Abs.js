@@ -25,9 +25,9 @@ const MuscleGroups = ({ navigation }) => {
                     >
                         <Image
                             style={styles.imageStyle}
-                            source={require('../../../../assets/images/Chest/BenchPress.jpg')} />
+                            source={require('../../../../assets/images/Abs/AbWheelRollout.jpg')} />
                         <Text style={styles.textStyle}>
-                            Bench Press
+                            Ab Wheel Rollout
                         </Text>
 
                     </TouchableOpacity>
@@ -37,37 +37,9 @@ const MuscleGroups = ({ navigation }) => {
                     >
                         <Image
                             style={styles.imageStyle}
-                            source={require('../../../../assets/images/Chest/InclinePress.jpg')} />
+                            source={require('../../../../assets/images/Abs/CableCrunch.jpg')} />
                         <Text style={styles.textStyle}>
-                            Incline Press
-                        </Text>
-
-                    </TouchableOpacity>
-                </View>
-                <View
-                    style={styles.viewStyle}
-                >
-                    <TouchableOpacity
-                        style={styles.groupContainer}
-                    //   onPress={addExercisesHandler}
-                    >
-                        <Image
-                            style={styles.imageStyle}
-                            source={require('../../../../assets/images/Chest/DeclinePress.jpg')} />
-                        <Text style={styles.textStyle}>
-                            Decline Press
-                        </Text>
-
-                    </TouchableOpacity>
-                    <TouchableOpacity
-                        style={styles.groupContainer}
-                    //   onPress={addExercisesHandler}
-                    >
-                        <Image
-                            style={styles.imageStyle}
-                            source={require('../../../../assets/images/Chest/CableFly.jpg')} />
-                        <Text style={styles.textStyle}>
-                            Cable Fly
+                            Cable Crunch
                         </Text>
 
                     </TouchableOpacity>
@@ -81,9 +53,9 @@ const MuscleGroups = ({ navigation }) => {
                     >
                         <Image
                             style={styles.imageStyle}
-                            source={require('../../../../assets/images/Chest/InclineFly.jpg')} />
+                            source={require('../../../../assets/images/Abs/DumbbellSideBend.jpg')} />
                         <Text style={styles.textStyle}>
-                            Incline Fly
+                            Dumbbell Side Bend
                         </Text>
 
                     </TouchableOpacity>
@@ -93,37 +65,9 @@ const MuscleGroups = ({ navigation }) => {
                     >
                         <Image
                             style={styles.imageStyle}
-                            source={require('../../../../assets/images/Chest/DumbellFly.jpg')} />
+                            source={require('../../../../assets/images/Abs/HangingKneeRaise.jpg')} />
                         <Text style={styles.textStyle}>
-                            Dumbell Fly
-                        </Text>
-
-                    </TouchableOpacity>
-                </View>
-                <View
-                    style={styles.viewStyle}
-                >
-                    <TouchableOpacity
-                        style={styles.groupContainer}
-                    //   onPress={addExercisesHandler}
-                    >
-                        <Image
-                            style={styles.imageStyle}
-                            source={require('../../../../assets/images/Chest/ChestPress.jpg')} />
-                        <Text style={styles.textStyle}>
-                            Chest Press
-                        </Text>
-
-                    </TouchableOpacity>
-                    <TouchableOpacity
-                        style={styles.groupContainer}
-                    //   onPress={addExercisesHandler}
-                    >
-                        <Image
-                            style={styles.imageStyle}
-                            source={require('../../../../assets/images/Chest/MachineChessFly.jpg')} />
-                        <Text style={styles.textStyle}>
-                            Machine Fly
+                            Hanging Knee Raise
                         </Text>
 
                     </TouchableOpacity>
@@ -137,9 +81,9 @@ const MuscleGroups = ({ navigation }) => {
                     >
                         <Image
                             style={styles.imageStyle}
-                            source={require('../../../../assets/images/Chest/FloorPress.jpg')} />
+                            source={require('../../../../assets/images/Abs/HangingLegRaise.jpg')} />
                         <Text style={styles.textStyle}>
-                            Floor Press
+                            Hanging Leg Raise
                         </Text>
 
                     </TouchableOpacity>
@@ -149,9 +93,65 @@ const MuscleGroups = ({ navigation }) => {
                     >
                         <Image
                             style={styles.imageStyle}
-                            source={require('../../../../assets/images/Chest/SpotoPress.jpg')} />
+                            source={require('../../../../assets/images/Abs/LyingLegRaise.jpg')} />
                         <Text style={styles.textStyle}>
-                            Spoto Press
+                            Lying Leg Raise
+                        </Text>
+
+                    </TouchableOpacity>
+                </View>
+                <View
+                    style={styles.viewStyle}
+                >
+                    <TouchableOpacity
+                        style={styles.groupContainer}
+                    //   onPress={addExercisesHandler}
+                    >
+                        <Image
+                            style={styles.imageStyle}
+                            source={require('../../../../assets/images/Abs/MachineSeatedCrunch.jpg')} />
+                        <Text style={styles.textStyle}>
+                            Machine Seated Crunch
+                        </Text>
+
+                    </TouchableOpacity>
+                    <TouchableOpacity
+                        style={styles.groupContainer}
+                    //   onPress={addExercisesHandler}
+                    >
+                        <Image
+                            style={styles.imageStyle}
+                            source={require('../../../../assets/images/Abs/RussianTwist.jpg')} />
+                        <Text style={styles.textStyle}>
+                            Russian Twist
+                        </Text>
+
+                    </TouchableOpacity>
+                </View>
+                <View
+                    style={styles.viewStyle}
+                >
+                    <TouchableOpacity
+                        style={styles.groupContainer}
+                    //   onPress={addExercisesHandler}
+                    >
+                        <Image
+                            style={styles.imageStyle}
+                            source={require('../../../../assets/images/Abs/SitUps.jpg')} />
+                        <Text style={styles.textStyle}>
+                            Sit Ups
+                        </Text>
+
+                    </TouchableOpacity>
+                    <TouchableOpacity
+                        style={styles.groupContainer}
+                    //   onPress={addExercisesHandler}
+                    >
+                        <Image
+                            style={styles.imageStyle}
+                            source={require('../../../../assets/images/Abs/ToesToBar.jpg')} />
+                        <Text style={styles.textStyle}>
+                            Toes To Bar
                         </Text>
 
                     </TouchableOpacity>
@@ -178,7 +178,7 @@ const styles = StyleSheet.create({
     },
     textStyle: {
         color: 'black',
-        fontSize: 25,
+        fontSize: 18,
         textAlign: 'center',
     },
     container: {
@@ -187,7 +187,7 @@ const styles = StyleSheet.create({
         marginBottom: 10,
     },
     imageStyle: {
-        height: '80%',
+        height: '78%',
         width: '90%',
         alignSelf: 'center',
     },

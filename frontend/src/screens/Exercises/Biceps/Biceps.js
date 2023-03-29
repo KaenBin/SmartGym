@@ -25,9 +25,9 @@ const MuscleGroups = ({ navigation }) => {
                     >
                         <Image
                             style={styles.imageStyle}
-                            source={require('../../../../assets/images/Chest/BenchPress.jpg')} />
+                            source={require('../../../../assets/images/Biceps/BarbellCurl.jpg')} />
                         <Text style={styles.textStyle}>
-                            Bench Press
+                            Barbell Curl
                         </Text>
 
                     </TouchableOpacity>
@@ -37,9 +37,9 @@ const MuscleGroups = ({ navigation }) => {
                     >
                         <Image
                             style={styles.imageStyle}
-                            source={require('../../../../assets/images/Chest/InclinePress.jpg')} />
+                            source={require('../../../../assets/images/Biceps/CableBicepCurl.jpg')} />
                         <Text style={styles.textStyle}>
-                            Incline Press
+                            Cable Bicep Curl
                         </Text>
 
                     </TouchableOpacity>
@@ -53,9 +53,9 @@ const MuscleGroups = ({ navigation }) => {
                     >
                         <Image
                             style={styles.imageStyle}
-                            source={require('../../../../assets/images/Chest/DeclinePress.jpg')} />
+                            source={require('../../../../assets/images/Biceps/DumbbellConcentrationCurl.jpg')} />
                         <Text style={styles.textStyle}>
-                            Decline Press
+                            Dumbbell Concentration Curl
                         </Text>
 
                     </TouchableOpacity>
@@ -65,9 +65,9 @@ const MuscleGroups = ({ navigation }) => {
                     >
                         <Image
                             style={styles.imageStyle}
-                            source={require('../../../../assets/images/Chest/CableFly.jpg')} />
+                            source={require('../../../../assets/images/Biceps/DumbbellCurl.jpg')} />
                         <Text style={styles.textStyle}>
-                            Cable Fly
+                            Dumbbell Curl
                         </Text>
 
                     </TouchableOpacity>
@@ -81,9 +81,9 @@ const MuscleGroups = ({ navigation }) => {
                     >
                         <Image
                             style={styles.imageStyle}
-                            source={require('../../../../assets/images/Chest/InclineFly.jpg')} />
+                            source={require('../../../../assets/images/Biceps/HammerCurl.jpg')} />
                         <Text style={styles.textStyle}>
-                            Incline Fly
+                            Hammer Curl
                         </Text>
 
                     </TouchableOpacity>
@@ -93,9 +93,9 @@ const MuscleGroups = ({ navigation }) => {
                     >
                         <Image
                             style={styles.imageStyle}
-                            source={require('../../../../assets/images/Chest/DumbellFly.jpg')} />
+                            source={require('../../../../assets/images/Biceps/OneArmCableBicepCurl.jpg')} />
                         <Text style={styles.textStyle}>
-                            Dumbell Fly
+                            One Arm Cable Bicep Curl
                         </Text>
 
                     </TouchableOpacity>
@@ -109,9 +109,9 @@ const MuscleGroups = ({ navigation }) => {
                     >
                         <Image
                             style={styles.imageStyle}
-                            source={require('../../../../assets/images/Chest/ChestPress.jpg')} />
+                            source={require('../../../../assets/images/Biceps/PreacherCurl.jpg')} />
                         <Text style={styles.textStyle}>
-                            Chest Press
+                            Preacher Curl
                         </Text>
 
                     </TouchableOpacity>
@@ -121,14 +121,14 @@ const MuscleGroups = ({ navigation }) => {
                     >
                         <Image
                             style={styles.imageStyle}
-                            source={require('../../../../assets/images/Chest/MachineChessFly.jpg')} />
+                            source={require('../../../../assets/images/Biceps/StrictCurl.jpg')} />
                         <Text style={styles.textStyle}>
-                            Machine Fly
+                            Strict Curl
                         </Text>
 
                     </TouchableOpacity>
                 </View>
-                <View
+                {/* <View
                     style={styles.viewStyle}
                 >
                     <TouchableOpacity
@@ -155,7 +155,7 @@ const MuscleGroups = ({ navigation }) => {
                         </Text>
 
                     </TouchableOpacity>
-                </View>
+                </View> */}
             </ScrollView>
         </SafeAreaView>
     );
@@ -178,8 +178,9 @@ const styles = StyleSheet.create({
     },
     textStyle: {
         color: 'black',
-        fontSize: 25,
+        fontSize: 18,
         textAlign: 'center',
+        // verticalAlign:'bottom',
     },
     container: {
         marginHorizontal: 20,
@@ -187,7 +188,7 @@ const styles = StyleSheet.create({
         marginBottom: 10,
     },
     imageStyle: {
-        height: '80%',
+        height: '78%',
         width: '90%',
         alignSelf: 'center',
     },
