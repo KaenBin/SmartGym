@@ -1,15 +1,23 @@
 import { StatusBar } from 'expo-status-bar';
 import * as React from 'react';
+import { useEffect } from 'react';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { NavigationContainer } from '@react-navigation/native';
 import { ThemeProvider } from 'react-native-elements';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import { AuthContext } from './src/screens/utils';
 // import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 // import { assets } from './react-native.config'
 
-import { SignInScreen, SignUpScreen, SplashScreen, HomeScreen, HistoryScreen, ExercisesScreen, GymScreen } from './src/screens';
-
+import {
+  SignInScreen,
+  SignUpScreen,
+  SplashScreen,
+  HomeScreen,
+  HistoryScreen,
+  ExercisesScreen,
+  GymScreen
+} from './src/screens';
+import { AuthContext } from './src/screens/utils';
 import MuscleGroups from './src/screens/Exercises/MuscleGroups'
 import Chest from './src/screens/Exercises/Chest/Chest'
 import Back from './src/screens/Exercises/Back/Back'
@@ -20,9 +28,11 @@ import Legs from './src/screens/Exercises/Legs/Legs'
 import Abs from './src/screens/Exercises/Abs/Abs'
 import FullBody from './src/screens/Exercises/FullBody/FullBody'
 import * as SecureStore from 'expo-secure-store';
+import client from './src/api/client'
 
 const Stack = createNativeStackNavigator();
 // const Tab = createBottomTabNavigator();
+// const baseURrl = 'http://localhost:8000/'
 
 function Exercises() {
   return (
@@ -133,6 +143,19 @@ function Exercises() {
 }
 
 export default function App() {
+  // const fetchAPI = async() => {
+  //   try {
+  // const res = await axios.get(baseURrl);
+  // console.log(res.data);
+  //   } catch (error) {
+  //     console.log(error.message);
+  //   }
+  // }
+
+  // useEffect(() => {
+  //   fetchAPI();
+  // }, [])
+
   const [state, dispatch] = React.useReducer(
     (prevState, action) => {
       switch (action.type) {
@@ -145,7 +168,7 @@ export default function App() {
         case 'SIGN_IN':
           if (action.token) {
             // console.log(action.token)
-            SecureStore.setItemAsync('userToken', 'action.token');
+            SecureStore.setItemAsync('userToken', action.token);
           }
           return {
             ...prevState,
@@ -168,7 +191,7 @@ export default function App() {
     }
   );
 
-  React.useEffect(() => {
+  useEffect(() => {
     // Fetch the token from storage then navigate to our appropriate place
     const bootstrapAsync = async () => {
       let userToken;
@@ -176,9 +199,9 @@ export default function App() {
       try {
         // Restore token stored in `SecureStore` or any other encrypted storage
         userToken = await SecureStore.getItemAsync('userToken');
-      } catch (e) {
+      } catch (error) {
         // Restoring token failed
-        // console.log('Token Failed')
+        console.log(error.message);
       }
 
       // After restoring token, we may need to validate it in production apps
@@ -188,6 +211,7 @@ export default function App() {
       dispatch({ type: 'RESTORE_TOKEN', token: userToken });
     };
 
+    // fetchAPI();
     bootstrapAsync();
   }, []);
 
@@ -198,8 +222,13 @@ export default function App() {
         // We will also need to handle errors if sign in failed
         // After getting token, we need to persist the token using `SecureStore` or any other encrypted storage
         // In the example, we'll use a dummy token
-
-        dispatch({ type: 'SIGN_IN', token: 'dummy-auth-token' });
+        try {
+          User = await client.post('/login', data);
+          userToken = User.data.token
+          dispatch({ type: 'SIGN_IN', token: userToken });
+        } catch (error) {
+          console.log(error.message)
+        }
       },
       signOut: () => dispatch({ type: 'SIGN_OUT' }),
       signUp: async (data) => {
@@ -207,12 +236,17 @@ export default function App() {
         // We will also need to handle errors if sign up failed
         // After getting token, we need to persist the token using `SecureStore` or any other encrypted storage
         // In the example, we'll use a dummy token
-
-        dispatch({ type: 'SIGN_IN', token: 'dummy-auth-token' });
+        try {
+          console.log(data)
+          User = await client.post('/signup', data);
+          console.log(data)
+          userToken = User.data.token
+          dispatch({ type: 'SIGN_IN', token: userToken });
+        } catch (error) {
+          console.log(error.message)
+        }
       },
-    }),
-    []
-  );
+    }), []);
   return (
     <SafeAreaProvider>
       <AuthContext.Provider value={authContext}>
@@ -225,7 +259,7 @@ export default function App() {
               ) : state.userToken == null ? (
                 // No token found, user isn't signed in
                 <Stack.Screen
-                  name="SignIn"
+                  name="SignInScreen"
                   component={SignInScreen}
                   options={{
                     title: 'Sign in',
@@ -237,47 +271,47 @@ export default function App() {
               ) : (
                 // User is signed in
                 <Stack.Screen
-                  name="Home"
+                  name="HomeScreen"
                   component={HomeScreen}
-                options={{ headerShown: false }}
+                  options={{ headerShown: false }}
                 />
               )}
               <Stack.Screen
-              name="SignUpScreen"
-              component={SignUpScreen}
-              options={{
-                headerStyle: { backgroundColor: "#2F486D", },
-                headerTintColor: 'white',
-                headerTitle: 'SIGN UP',
-                headerTitleAlign: 'center',
-                headerBackVisible: false,
-              }}
-            />
+                name="SignUpScreen"
+                component={SignUpScreen}
+                options={{
+                  headerStyle: { backgroundColor: "#2F486D", },
+                  headerTintColor: 'white',
+                  headerTitle: 'SIGN UP',
+                  headerTitleAlign: 'center',
+                  headerBackVisible: false,
+                }}
+              />
               <Stack.Screen
-              name="HistoryScreen"
-              component={HistoryScreen}
-              options={{
-                headerStyle: { backgroundColor: "#2F486D", },
-                headerTintColor: 'white',
-                headerTitle: 'TRAINING HISTORY',
-                headerTitleAlign: 'center',
-              }}
-            />
-            <Stack.Screen
-              name="Exercises"
-              component={Exercises}
-              options={{ headerShown: false }}
-            />
-            <Stack.Screen
-              name="GymScreen"
-              component={GymScreen}
-              options={{
-                headerStyle: { backgroundColor: "#2F486D", },
-                headerTintColor: 'white',
-                headerTitle: 'GYM INFORMATION',
-                headerTitleAlign: 'center',
-              }}
-            />
+                name="HistoryScreen"
+                component={HistoryScreen}
+                options={{
+                  headerStyle: { backgroundColor: "#2F486D", },
+                  headerTintColor: 'white',
+                  headerTitle: 'TRAINING HISTORY',
+                  headerTitleAlign: 'center',
+                }}
+              />
+              <Stack.Screen
+                name="Exercises"
+                component={Exercises}
+                options={{ headerShown: false }}
+              />
+              <Stack.Screen
+                name="GymScreen"
+                component={GymScreen}
+                options={{
+                  headerStyle: { backgroundColor: "#2F486D", },
+                  headerTintColor: 'white',
+                  headerTitle: 'GYM INFORMATION',
+                  headerTitleAlign: 'center',
+                }}
+              />
             </Stack.Navigator>
             <StatusBar />
           </NavigationContainer>
