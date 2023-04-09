@@ -158,7 +158,7 @@ export function HomeScreen({ navigation }) {
             </View>
           </TouchableOpacity>
           <TouchableOpacity style={styles.opcaityStyle} onPress={signOut}>
-            <Icon2 name="arrow-back-circle-outline" style={[styles.iconStyle, {fontSize: 55}]} />
+            <Icon2 name="arrow-back-circle" style={[styles.iconStyle, {fontSize: 55}]} />
             <View style={styles.textBox}>
               <Text style={styles.textStyle}>Sign Out</Text>
             </View>

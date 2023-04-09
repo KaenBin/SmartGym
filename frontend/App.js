@@ -29,6 +29,7 @@ import Abs from './src/screens/Exercises/Abs/Abs'
 import FullBody from './src/screens/Exercises/FullBody/FullBody'
 import * as SecureStore from 'expo-secure-store';
 import client from './src/api/client'
+import axios from 'axios';
 
 const Stack = createNativeStackNavigator();
 // const Tab = createBottomTabNavigator();
