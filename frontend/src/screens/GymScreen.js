@@ -1,9 +1,13 @@
 import React, { useState, useEffect } from 'react';
+<<<<<<< HEAD
 
 // import Icon1 from 'react-native-vector-icons/FontAwesome5';
 // import Icon2 from 'react-native-vector-icons/Ionicons'
 // import Icon3 from 'react-native-vector-icons/Foundation'
 // import Icon4 from 'react-native-vector-icons/FontAwesome'
+=======
+import axios from 'axios';
+>>>>>>> ab09dfd70f302fcab78fd1ab92156f9b0dbed01a
 
 import {
     SafeAreaView,
@@ -14,20 +18,44 @@ import {
     ScrollView
 } from 'react-native';
 
-export function GymScreen ({ navigation }) {
+export function GymScreen() {
+    const [moisure, setMoisure] = useState('0.0');
+    const [temp, setTemp] = useState('0.0');
+
+    useEffect(() => {
+        axios.get('https://io.adafruit.com/api/v2/KaenBin/feeds/bbc-moisure')
+            .then(response => {
+                setMoisure(response.data.last_value);
+            })
+            .catch(error => {
+                console.log(error);
+            });
+        axios.get('https://io.adafruit.com/api/v2/KaenBin/feeds/bbc-temp')
+            .then(response => {
+                setTemp(response.data.last_value);
+            })
+            .catch(error => {
+                console.log(error);
+            });
+    });
+
     return (
         <SafeAreaView style={{ flex: 1, backgroundColor: "#EFFEFF" }}>
             <ScrollView contentContainerStyle={styles.container}>
                 <Text style={[styles.titleStyle, { alignSelf: 'center' }]}>
                     Room Information
                 </Text>
-                <View style={[styles.textRow, {margin: 2}]}>
+                <View style={[styles.textRow, { margin: 2 }]}>
                     <View style={styles.textBox}>
                         <Text style={styles.textStyle1}>
                             Temperature
                         </Text>
                         <Text style={styles.textStyle1}>
+<<<<<<< HEAD
                             37°C
+=======
+                            {temp}°C
+>>>>>>> ab09dfd70f302fcab78fd1ab92156f9b0dbed01a
                         </Text>
                     </View>
                     <View style={styles.textBox}>
@@ -35,11 +63,11 @@ export function GymScreen ({ navigation }) {
                             Moisture
                         </Text>
                         <Text style={styles.textStyle1}>
-                            50%
+                            {moisure}%
                         </Text>
                     </View>
                 </View>
-                <View style={[styles.textRow, {margin: 2}]}>
+                <View style={[styles.textRow, { margin: 2 }]}>
                     <View style={styles.textBox}>
                         <Text style={styles.textStyle1}>
                             All facilities

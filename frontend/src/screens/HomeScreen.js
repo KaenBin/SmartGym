@@ -93,6 +93,7 @@ export function HomeScreen({ navigation }) {
   const { signOut } = React.useContext(AuthContext);
   return (
     <SafeAreaView style={{ flex: 1, backgroundColor: "#EFFEFF" }}>
+
       <View style={styles.navigationBar}>
         <Text style={styles.textWelcome}>
           Welcome to the home page
@@ -134,7 +135,7 @@ export function HomeScreen({ navigation }) {
         </View>
         <View style={styles.containerBox}>
           <TouchableOpacity style={styles.opcaityStyle} onPress={() => navigation.push('Exercises')}>
-            <Icon3 name="clipboard-notes" style={[styles.iconStyle, { fontSize: 64 }]} />
+            <Icon3 name="clipboard-notes" style={[styles.iconStyle, { fontSize: 63 }]} />
             <View style={styles.textBox}>
               <Text style={styles.textStyle}>My</Text>
               <Text style={styles.textStyle}>Exercises</Text>
@@ -156,9 +157,14 @@ export function HomeScreen({ navigation }) {
               <Text style={styles.textStyle}>Information</Text>
             </View>
           </TouchableOpacity>
+          <TouchableOpacity style={styles.opcaityStyle} onPress={signOut}>
+            <Icon2 name="arrow-back-circle" style={[styles.iconStyle, {fontSize: 55}]} />
+            <View style={styles.textBox}>
+              <Text style={styles.textStyle}>Sign Out</Text>
+            </View>
+          </TouchableOpacity>
         </View>
       </View>
-      <Button title='Sign out' onPress={signOut} />
       <Text style={styles.textHCMUT}>
         <Text>powered by</Text>
         <Text style={{ fontWeight: "bold" }}> HCMUT</Text>
@@ -168,6 +174,13 @@ export function HomeScreen({ navigation }) {
 };
 
 const styles = StyleSheet.create({
+  buttonStyle: {
+    position: 'absolute',
+    marginLeft: '75%',
+    height: '75%',
+    width: '10%',  
+    color: 'black',
+  },
   container: {
     width: "90%",
     alignSelf: "center",
@@ -235,6 +248,10 @@ const styles = StyleSheet.create({
     fontSize: 12,
     // textAlign: 'center',
     // justifyContent: 'center',
+  },
+  textOut: {
+    color: 'white',
+    alignSelf: 'center',
   },
   textWelcome: {
     marginTop: 75,
