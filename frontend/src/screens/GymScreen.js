@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 
-import Icon1 from 'react-native-vector-icons/FontAwesome5';
-import Icon2 from 'react-native-vector-icons/Ionicons'
-import Icon3 from 'react-native-vector-icons/Foundation'
-import Icon4 from 'react-native-vector-icons/FontAwesome'
+// import Icon1 from 'react-native-vector-icons/FontAwesome5';
+// import Icon2 from 'react-native-vector-icons/Ionicons'
+// import Icon3 from 'react-native-vector-icons/Foundation'
+// import Icon4 from 'react-native-vector-icons/FontAwesome'
 
 import {
     SafeAreaView,
@@ -27,7 +27,7 @@ export function GymScreen ({ navigation }) {
                             Temperature
                         </Text>
                         <Text style={styles.textStyle1}>
-                            37*C
+                            37°C
                         </Text>
                     </View>
                     <View style={styles.textBox}>
@@ -85,7 +85,7 @@ export function GymScreen ({ navigation }) {
                             Hotline:
                         </Text>
                         <Text style={[styles.textStyle2, { color: '#555555', textAlign: 'right', }]}>
-                            0123456789
+                            012 3456 789
                         </Text>
                     </View>
                 </View>

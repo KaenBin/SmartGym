@@ -140,7 +140,7 @@ export function HomeScreen({ navigation }) {
               <Text style={styles.textStyle}>Exercises</Text>
             </View>
           </TouchableOpacity>
-          <TouchableOpacity style={styles.opcaityStyle}>
+          <TouchableOpacity style={styles.opcaityStyle} onPress={() => navigation.push('PersonalScreen')}>
             <Icon4 name="user-circle" style={styles.iconStyle} />
             <View style={styles.textBox}>
               <Text style={styles.textStyle}>Personal</Text>
@@ -192,8 +192,8 @@ const styles = StyleSheet.create({
   navigationBar: {
     backgroundColor: '#2F486D',
     height: "25%",
-    borderBottomLeftRadius: 8,
-    borderBottomRightRadius: 8,
+    borderBottomLeftRadius: 0,
+    borderBottomRightRadius: 0,
   },
   opcaityStyle: {
     alignItems: 'center',
@@ -237,9 +237,10 @@ const styles = StyleSheet.create({
     // justifyContent: 'center',
   },
   textWelcome: {
-    marginTop: 50,
-    marginBottom: 25,
-    fontSize: 33,
+    marginTop: 75,
+    marginBottom: 10,
+    fontSize: 29,
+    fontWeight: 700,
     color: 'white',
     alignSelf: 'center',
   },

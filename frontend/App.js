@@ -8,7 +8,14 @@ import { AuthContext } from './src/screens/utils';
 // import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 // import { assets } from './react-native.config'
 
-import { SignInScreen, SignUpScreen, SplashScreen, HomeScreen, HistoryScreen, ExercisesScreen, GymScreen } from './src/screens';
+import { SignInScreen, 
+  SignUpScreen, 
+  SplashScreen, 
+  HomeScreen, 
+  HistoryScreen, 
+  ExercisesScreen, 
+  GymScreen,
+  PersonalScreen} from './src/screens';
 
 import MuscleGroups from './src/screens/Exercises/MuscleGroups'
 import Chest from './src/screens/Exercises/Chest/Chest'
@@ -20,6 +27,7 @@ import Legs from './src/screens/Exercises/Legs/Legs'
 import Abs from './src/screens/Exercises/Abs/Abs'
 import FullBody from './src/screens/Exercises/FullBody/FullBody'
 import * as SecureStore from 'expo-secure-store';
+
 
 const Stack = createNativeStackNavigator();
 // const Tab = createBottomTabNavigator();
@@ -278,8 +286,19 @@ export default function App() {
                 headerTitleAlign: 'center',
               }}
             />
+            <Stack.Screen
+              name="PersonalScreen"
+              component={PersonalScreen}
+              options={{
+                headerStyle: { backgroundColor: '#2F486D',},
+                headerTintColor: 'white',
+                headerTitle: 'PERSONAL INFORMATION',
+                headerTitleAlign: 'center',
+              }}
+            />
+            
             </Stack.Navigator>
-            <StatusBar />
+            <StatusBar/>
           </NavigationContainer>
         </ThemeProvider>
       </AuthContext.Provider>
