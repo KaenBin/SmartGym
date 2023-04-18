@@ -1,38 +1,37 @@
 import React, { useState, useEffect } from 'react';
-<<<<<<< HEAD
-
-// import Icon1 from 'react-native-vector-icons/FontAwesome5';
-// import Icon2 from 'react-native-vector-icons/Ionicons'
-// import Icon3 from 'react-native-vector-icons/Foundation'
-// import Icon4 from 'react-native-vector-icons/FontAwesome'
-=======
 import axios from 'axios';
->>>>>>> ab09dfd70f302fcab78fd1ab92156f9b0dbed01a
 
 import {
     SafeAreaView,
     Text,
     StyleSheet,
     View,
-    TouchableOpacity,
     ScrollView
 } from 'react-native';
 
 export function GymScreen() {
     const [moisure, setMoisure] = useState('0.0');
     const [temp, setTemp] = useState('0.0');
+    const [light, setLight] = useState('0.0')
 
     useEffect(() => {
-        axios.get('https://io.adafruit.com/api/v2/KaenBin/feeds/bbc-moisure')
+        axios.get('https://io.adafruit.com/api/v2/tamdinhktmtk20/feeds/sensor-moisture')
             .then(response => {
                 setMoisure(response.data.last_value);
             })
             .catch(error => {
                 console.log(error);
             });
-        axios.get('https://io.adafruit.com/api/v2/KaenBin/feeds/bbc-temp')
+        axios.get('https://io.adafruit.com/api/v2/tamdinhktmtk20/feeds/sensor-temperature')
             .then(response => {
                 setTemp(response.data.last_value);
+            })
+            .catch(error => {
+                console.log(error);
+            });
+        axios.get('https://io.adafruit.com/api/v2/tamdinhktmtk20/feeds/sensor-lights')
+            .then(response => {
+                setLight(response.data.last_value);
             })
             .catch(error => {
                 console.log(error);
@@ -51,11 +50,7 @@ export function GymScreen() {
                             Temperature
                         </Text>
                         <Text style={styles.textStyle1}>
-<<<<<<< HEAD
-                            37°C
-=======
-                            {temp}°C
->>>>>>> ab09dfd70f302fcab78fd1ab92156f9b0dbed01a
+                            {temp}Â°C
                         </Text>
                     </View>
                     <View style={styles.textBox}>
@@ -113,7 +108,7 @@ export function GymScreen() {
                             Hotline:
                         </Text>
                         <Text style={[styles.textStyle2, { color: '#555555', textAlign: 'right', }]}>
-                            012 3456 789
+                            0123456789
                         </Text>
                     </View>
                 </View>
