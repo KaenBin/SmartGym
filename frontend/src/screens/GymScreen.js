@@ -6,25 +6,32 @@ import {
     Text,
     StyleSheet,
     View,
-    TouchableOpacity,
     ScrollView
 } from 'react-native';
 
 export function GymScreen() {
     const [moisure, setMoisure] = useState('0.0');
     const [temp, setTemp] = useState('0.0');
+    const [light, setLight] = useState('0.0')
 
     useEffect(() => {
-        axios.get('https://io.adafruit.com/api/v2/KaenBin/feeds/bbc-moisure')
+        axios.get('https://io.adafruit.com/api/v2/tamdinhktmtk20/feeds/sensor-moisture')
             .then(response => {
                 setMoisure(response.data.last_value);
             })
             .catch(error => {
                 console.log(error);
             });
-        axios.get('https://io.adafruit.com/api/v2/KaenBin/feeds/bbc-temp')
+        axios.get('https://io.adafruit.com/api/v2/tamdinhktmtk20/feeds/sensor-temperature')
             .then(response => {
                 setTemp(response.data.last_value);
+            })
+            .catch(error => {
+                console.log(error);
+            });
+        axios.get('https://io.adafruit.com/api/v2/tamdinhktmtk20/feeds/sensor-lights')
+            .then(response => {
+                setLight(response.data.last_value);
             })
             .catch(error => {
                 console.log(error);

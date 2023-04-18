@@ -7,7 +7,7 @@ const User = require("../models/userModel");
 userRouter.post("/signup", async (request, response) => {
   const { username, password } = request.body;
   const existingUser = await User.findOne({ username });
-  if (existingUser){
+  if (existingUser) {
     return response.status(400).json({
       error: "username must be unique",
     });
@@ -19,7 +19,16 @@ userRouter.post("/signup", async (request, response) => {
     passwordHash,
   });
   const savedUser = await user.save();
-  response.status(201).json(savedUser);
+  const userForToken = {
+    username: savedUser.username,
+    id: savedUser._id,
+  }
+  const token = jwt.sign(
+    userForToken,
+    "abc",
+    { expiresIn: 60 * 60 }
+  )
+  response.status(200).send({ token, savedUser })
 });
 
 //Login
@@ -40,10 +49,11 @@ userRouter.post('/login', async (request, response) => {
     id: user._id,
   }
   const token = jwt.sign(
-    userForToken, 
+    userForToken,
     "abc",
-    { expiresIn: 60*60 }
+    { expiresIn: 60 * 60 }
   )
+  console.log(token)
   response
     .status(200)
     .send({ token, user })

@@ -12,7 +12,7 @@ import {
     ScrollView
 } from 'react-native';
 
-const MuscleGroups = ({ navigation }) => {
+const Chest = ({ navigation }) => {
     return (
         <SafeAreaView style={{backgroundColor: 'white', marginBottom: 20,}}>
             <ScrollView contentContainerStyle={styles.container}>
@@ -21,7 +21,7 @@ const MuscleGroups = ({ navigation }) => {
                 >
                     <TouchableOpacity
                         style={styles.groupContainer}
-                    //   onPress={addExercisesHandler}
+                        onPress={() => navigation.push('Exercise Detail', {item: 'bench press'})}
                     >
                         <Image
                             style={styles.imageStyle}
@@ -33,7 +33,7 @@ const MuscleGroups = ({ navigation }) => {
                     </TouchableOpacity>
                     <TouchableOpacity
                         style={styles.groupContainer}
-                    //   onPress={addExercisesHandler}
+                        onPress={() => navigation.push('Exercise Detail', {item: 'incline press'})}
                     >
                         <Image
                             style={styles.imageStyle}
@@ -49,7 +49,7 @@ const MuscleGroups = ({ navigation }) => {
                 >
                     <TouchableOpacity
                         style={styles.groupContainer}
-                    //   onPress={addExercisesHandler}
+                        onPress={() => navigation.push('Exercise Detail', {item: 'decline press'})}
                     >
                         <Image
                             style={styles.imageStyle}
@@ -161,7 +161,7 @@ const MuscleGroups = ({ navigation }) => {
     );
 };
 
-export default MuscleGroups;
+export default Chest;
 
 const styles = StyleSheet.create({
     groupContainer: {

@@ -1,11 +1,5 @@
 const mongoose = require('mongoose');
-
-const user = {
-    username: '',
-    email: '',
-    password: '',
-    avatar: '',
-}
+const Exercise = require('./exerciseModel')
 
 const userSchema = new mongoose.Schema({
     username: {
@@ -16,7 +10,7 @@ const userSchema = new mongoose.Schema({
         type: String,
         required: true,
     },
-    avatar: Buffer
+    exerciseDeck: []
 })
 
 module.exports = mongoose.model('User', userSchema)

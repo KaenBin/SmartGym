@@ -1,27 +1,28 @@
-import React, { useState, useEffect } from 'react';
-
 // import all the components we are going to use
 import {
     SafeAreaView,
     Text,
     StyleSheet,
     View,
-    TextInput,
     Image,
     TouchableOpacity,
     ScrollView
 } from 'react-native';
 
-const MuscleGroups = ({ navigation }) => {
+import data from './Data';
+import { SmallCard } from '../../../components/SmallCard';
+
+const Abs = ({ navigation }) => {
+
     return (
-        <SafeAreaView style={{backgroundColor: 'white', marginBottom: 20,}}>
-            <ScrollView contentContainerStyle={styles.container}>
+        <SafeAreaView style={{ backgroundColor: 'white', marginBottom: 20, }}>
+            <ScrollView data={data} contentContainerStyle={styles.container}>
                 <View
                     style={styles.viewStyle}
                 >
                     <TouchableOpacity
                         style={styles.groupContainer}
-                    //   onPress={addExercisesHandler}
+                        onPress={() => navigation.push('Exercise Detail', {item: 'ab wheel rollout'})}
                     >
                         <Image
                             style={styles.imageStyle}
@@ -29,11 +30,10 @@ const MuscleGroups = ({ navigation }) => {
                         <Text style={styles.textStyle}>
                             Ab Wheel Rollout
                         </Text>
-
                     </TouchableOpacity>
                     <TouchableOpacity
                         style={styles.groupContainer}
-                    //   onPress={addExercisesHandler}
+                        onPress={() => navigation.push('Exercise Detail', {item: 'cable crunch'})}
                     >
                         <Image
                             style={styles.imageStyle}
@@ -41,7 +41,6 @@ const MuscleGroups = ({ navigation }) => {
                         <Text style={styles.textStyle}>
                             Cable Crunch
                         </Text>
-
                     </TouchableOpacity>
                 </View>
                 <View
@@ -57,7 +56,6 @@ const MuscleGroups = ({ navigation }) => {
                         <Text style={styles.textStyle}>
                             Dumbbell Side Bend
                         </Text>
-
                     </TouchableOpacity>
                     <TouchableOpacity
                         style={styles.groupContainer}
@@ -69,7 +67,6 @@ const MuscleGroups = ({ navigation }) => {
                         <Text style={styles.textStyle}>
                             Hanging Knee Raise
                         </Text>
-
                     </TouchableOpacity>
                 </View>
                 <View
@@ -85,7 +82,6 @@ const MuscleGroups = ({ navigation }) => {
                         <Text style={styles.textStyle}>
                             Hanging Leg Raise
                         </Text>
-
                     </TouchableOpacity>
                     <TouchableOpacity
                         style={styles.groupContainer}
@@ -97,7 +93,6 @@ const MuscleGroups = ({ navigation }) => {
                         <Text style={styles.textStyle}>
                             Lying Leg Raise
                         </Text>
-
                     </TouchableOpacity>
                 </View>
                 <View
@@ -113,7 +108,6 @@ const MuscleGroups = ({ navigation }) => {
                         <Text style={styles.textStyle}>
                             Machine Seated Crunch
                         </Text>
-
                     </TouchableOpacity>
                     <TouchableOpacity
                         style={styles.groupContainer}
@@ -125,7 +119,6 @@ const MuscleGroups = ({ navigation }) => {
                         <Text style={styles.textStyle}>
                             Russian Twist
                         </Text>
-
                     </TouchableOpacity>
                 </View>
                 <View
@@ -141,7 +134,6 @@ const MuscleGroups = ({ navigation }) => {
                         <Text style={styles.textStyle}>
                             Sit Ups
                         </Text>
-
                     </TouchableOpacity>
                     <TouchableOpacity
                         style={styles.groupContainer}
@@ -153,7 +145,6 @@ const MuscleGroups = ({ navigation }) => {
                         <Text style={styles.textStyle}>
                             Toes To Bar
                         </Text>
-
                     </TouchableOpacity>
                 </View>
             </ScrollView>
@@ -161,7 +152,7 @@ const MuscleGroups = ({ navigation }) => {
     );
 };
 
-export default MuscleGroups;
+export default Abs;
 
 const styles = StyleSheet.create({
     groupContainer: {

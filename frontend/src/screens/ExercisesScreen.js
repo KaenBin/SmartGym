@@ -13,9 +13,6 @@ import {
 } from 'react-native';
 
 export function ExercisesScreen ({navigation}) {
-  // const [Exercises, setExercises] = useState([]);
-
-  // function addExercisesHandler() {}
   return (
     <SafeAreaView style={{flex: 1, backgroundColor: '#1C2B41'}}>
       <View style={styles.container}>

@@ -7,6 +7,9 @@ import { ThemeProvider } from 'react-native-elements';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 // import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 // import { assets } from './react-native.config'
+import * as SecureStore from 'expo-secure-store';
+import client from './src/api/client'
+import axios from 'axios';
 
 import {
   SignInScreen,
@@ -16,7 +19,7 @@ import {
   HistoryScreen,
   ExercisesScreen,
   GymScreen
-} from './src/screens';
+} from './src';
 import { AuthContext } from './src/screens/utils';
 import MuscleGroups from './src/screens/Exercises/MuscleGroups'
 import Chest from './src/screens/Exercises/Chest/Chest'
@@ -27,9 +30,9 @@ import Shoulders from './src/screens/Exercises/Shoulders/Shoulders'
 import Legs from './src/screens/Exercises/Legs/Legs'
 import Abs from './src/screens/Exercises/Abs/Abs'
 import FullBody from './src/screens/Exercises/FullBody/FullBody'
-import * as SecureStore from 'expo-secure-store';
-import client from './src/api/client'
-import axios from 'axios';
+import ExerciseDetail from './src/components/ExerciseDetail';
+
+import { SearchBar } from './src';
 
 const Stack = createNativeStackNavigator();
 // const Tab = createBottomTabNavigator();
@@ -139,6 +142,15 @@ function Exercises() {
           headerTitleStyle: { fontWeight: '100', fontSize: 20, }
         }}
       />
+      <Stack.Screen
+        name="Exercise Detail"
+        component={ExerciseDetail}
+        options={{
+          headerTintColor: 'white',
+          headerStyle: { backgroundColor: "#2F486D", },
+          headerTitleStyle: { color: '#2F486D' }
+        }}
+      />
     </Stack.Navigator>
   );
 }
@@ -168,7 +180,6 @@ export default function App() {
           };
         case 'SIGN_IN':
           if (action.token) {
-            // console.log(action.token)
             SecureStore.setItemAsync('userToken', action.token);
           }
           return {
@@ -226,6 +237,7 @@ export default function App() {
         try {
           User = await client.post('/login', data);
           userToken = User.data.token
+          console.log(User.data.token)
           dispatch({ type: 'SIGN_IN', token: userToken });
         } catch (error) {
           console.log(error.message)
@@ -238,9 +250,7 @@ export default function App() {
         // After getting token, we need to persist the token using `SecureStore` or any other encrypted storage
         // In the example, we'll use a dummy token
         try {
-          console.log(data)
           User = await client.post('/signup', data);
-          console.log(data)
           userToken = User.data.token
           dispatch({ type: 'SIGN_IN', token: userToken });
         } catch (error) {
@@ -258,17 +268,29 @@ export default function App() {
                 // We haven't finished checking for the token yet
                 <Stack.Screen name="Splash" component={SplashScreen} />
               ) : state.userToken == null ? (
-                // No token found, user isn't signed in
-                <Stack.Screen
-                  name="SignInScreen"
-                  component={SignInScreen}
-                  options={{
-                    title: 'Sign in',
-                    headerShown: false,
-                    // When logging out, a pop animation feels intuitive
-                    animationTypeForReplace: state.isSignout ? 'pop' : 'push',
-                  }}
-                />
+                <>
+                  <Stack.Screen
+                    name="SignInScreen"
+                    component={SignInScreen}
+                    options={{
+                      title: 'Sign in',
+                      headerShown: false,
+                      // When logging out, a pop animation feels intuitive
+                      animationTypeForReplace: state.isSignout ? 'pop' : 'push',
+                    }}
+                  />
+                  <Stack.Screen
+                    name="SignUpScreen"
+                    component={SignUpScreen}
+                    options={{
+                      headerStyle: { backgroundColor: "#2F486D", },
+                      headerTintColor: 'white',
+                      headerTitle: 'SIGN UP',
+                      headerTitleAlign: 'center',
+                      headerBackVisible: false,
+                    }}
+                  />
+                </>
               ) : (
                 // User is signed in
                 <Stack.Screen
@@ -277,17 +299,7 @@ export default function App() {
                   options={{ headerShown: false }}
                 />
               )}
-              <Stack.Screen
-                name="SignUpScreen"
-                component={SignUpScreen}
-                options={{
-                  headerStyle: { backgroundColor: "#2F486D", },
-                  headerTintColor: 'white',
-                  headerTitle: 'SIGN UP',
-                  headerTitleAlign: 'center',
-                  headerBackVisible: false,
-                }}
-              />
+
               <Stack.Screen
                 name="HistoryScreen"
                 component={HistoryScreen}
