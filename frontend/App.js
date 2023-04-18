@@ -11,15 +11,15 @@ import * as SecureStore from 'expo-secure-store';
 import client from './src/api/client'
 import axios from 'axios';
 
-import {
-  SignInScreen,
-  SignUpScreen,
-  SplashScreen,
-  HomeScreen,
-  HistoryScreen,
-  ExercisesScreen,
-  GymScreen
-} from './src';
+import { SignInScreen, 
+  SignUpScreen, 
+  SplashScreen, 
+  HomeScreen, 
+  HistoryScreen, 
+  ExercisesScreen, 
+  GymScreen,
+  PersonalScreen} from './src/screens';
+
 import { AuthContext } from './src/screens/utils';
 import MuscleGroups from './src/screens/Exercises/MuscleGroups'
 import Chest from './src/screens/Exercises/Chest/Chest'
@@ -33,6 +33,7 @@ import FullBody from './src/screens/Exercises/FullBody/FullBody'
 import ExerciseDetail from './src/components/ExerciseDetail';
 
 import { SearchBar } from './src';
+
 
 const Stack = createNativeStackNavigator();
 // const Tab = createBottomTabNavigator();
@@ -301,32 +302,43 @@ export default function App() {
               )}
 
               <Stack.Screen
-                name="HistoryScreen"
-                component={HistoryScreen}
-                options={{
-                  headerStyle: { backgroundColor: "#2F486D", },
-                  headerTintColor: 'white',
-                  headerTitle: 'TRAINING HISTORY',
-                  headerTitleAlign: 'center',
-                }}
-              />
-              <Stack.Screen
-                name="Exercises"
-                component={Exercises}
-                options={{ headerShown: false }}
-              />
-              <Stack.Screen
-                name="GymScreen"
-                component={GymScreen}
-                options={{
-                  headerStyle: { backgroundColor: "#2F486D", },
-                  headerTintColor: 'white',
-                  headerTitle: 'GYM INFORMATION',
-                  headerTitleAlign: 'center',
-                }}
-              />
+
+              name="HistoryScreen"
+              component={HistoryScreen}
+              options={{
+                headerStyle: { backgroundColor: "#2F486D", },
+                headerTintColor: 'white',
+                headerTitle: 'TRAINING HISTORY',
+                headerTitleAlign: 'center',
+              }}
+            />
+            <Stack.Screen
+              name="Exercises"
+              component={Exercises}
+              options={{ headerShown: false }}
+            />
+            <Stack.Screen
+              name="GymScreen"
+              component={GymScreen}
+              options={{
+                headerStyle: { backgroundColor: "#2F486D", },
+                headerTintColor: 'white',
+                headerTitle: 'GYM INFORMATION',
+                headerTitleAlign: 'center',
+              }}
+            />
+            <Stack.Screen
+              name="PersonalScreen"
+              component={PersonalScreen}
+              options={{
+                headerStyle: { backgroundColor: '#2F486D',},
+                headerTintColor: 'white',
+                headerTitle: 'PERSONAL INFORMATION',
+                headerTitleAlign: 'center',
+              }}
+            />
             </Stack.Navigator>
-            <StatusBar />
+            <StatusBar/>
           </NavigationContainer>
         </ThemeProvider>
       </AuthContext.Provider>

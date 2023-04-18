@@ -25,7 +25,7 @@ const CalendarTheme = {
 
 export function HistoryScreen ({navigation}) {
   const [currentDate, setCurrentDate] = useState(moment()
-     .utcOffset('+01:00')
+     .utcOffset('+07:00')
      .format('YYYY-MM-DD'));
   return (
     <SafeAreaView style={{flex: 1, backgroundColor: '#1C2B41'}}>

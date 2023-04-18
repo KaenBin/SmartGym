@@ -50,7 +50,7 @@ export function GymScreen() {
                             Temperature
                         </Text>
                         <Text style={styles.textStyle1}>
-                            {temp}°C
+                            {temp}Â°C
                         </Text>
                     </View>
                     <View style={styles.textBox}>
