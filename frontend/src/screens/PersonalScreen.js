@@ -191,6 +191,7 @@ export function PersonalScreen({ navigation }) {
     );
 };
 
+export default PersonalScreen
 
 const imageUploaderStyles=StyleSheet.create({
     container:{

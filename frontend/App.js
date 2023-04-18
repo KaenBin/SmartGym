@@ -18,7 +18,7 @@ import { SignInScreen,
   HistoryScreen, 
   ExercisesScreen, 
   GymScreen,
-  PersonalScreen} from './src/screens';
+  PersonalScreen} from './src/index';
 
 import { AuthContext } from './src/screens/utils';
 import MuscleGroups from './src/screens/Exercises/MuscleGroups'

@@ -7798,14 +7798,11 @@
   "integrity" "sha512-OXXYgpISEqERwjSlaCiaQY6cTY5CH6j73gdkWpK0hedxtiWMWgH+i5TOi4hIGYitm9kQBeyDu+wim9fA8ROFJA=="
   "resolved" "https://registry.npmjs.org/react-native-gradle-plugin/-/react-native-gradle-plugin-0.71.17.tgz"
   "version" "0.71.17"
-<<<<<<< HEAD
 
 "react-native-image-picker@^5.3.1":
   "integrity" "sha512-zRCjtlE3KOeaWDM8gXzTwXfvo3ZeF2XMkHceU7CVCtKRleKxna/E4XWIPu/lXO2qlMdnSx1WvfPSbqzAX0qxpA=="
   "resolved" "https://registry.npmjs.org/react-native-image-picker/-/react-native-image-picker-5.3.1.tgz"
   "version" "5.3.1"
-=======
->>>>>>> ab09dfd70f302fcab78fd1ab92156f9b0dbed01a
 
 "react-native-ratings@^8.1.0":
   "integrity" "sha512-+QOJ4G3NjVkI1D+tk4EGx1dCvVfbD2nQdkrj9cXrcAoEiwmbep4z4bZbCKmWMpQ5h2dqbxABU8/eBnbDmvAc3g=="

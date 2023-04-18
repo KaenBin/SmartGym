@@ -10,7 +10,6 @@ import {
 } from 'react-native';
 
 import data from './Data';
-import { SmallCard } from '../../../components/SmallCard';
 
 const Abs = ({ navigation }) => {
 

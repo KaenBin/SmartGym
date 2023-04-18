@@ -5,5 +5,5 @@ export * from './screens/HomeScreen';
 export * from './screens/HistoryScreen';
 export * from './screens/GymScreen';
 export * from './screens/ExercisesScreen';
-
+export * from './screens/PersonalScreen';
 export * from './components/SearchBar';

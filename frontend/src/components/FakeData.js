@@ -44,10 +44,6 @@ const images = [
     },
 
     {
-        image: require('../../assets/images/Back/BarbellShrug.jpg')
-    },
-
-    {
         image: require('../../assets/images/Back/BentOverRow.jpg')
     },
 
