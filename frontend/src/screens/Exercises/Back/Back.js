@@ -21,7 +21,7 @@ const MuscleGroups = ({ navigation }) => {
                 >
                     <TouchableOpacity
                         style={styles.groupContainer}
-                    //   onPress={addExercisesHandler}
+                        onPress={() => navigation.push('Exercise Detail', {item: 'barbell shrug'})}
                     >
                         <Image
                             style={styles.imageStyle}
@@ -33,7 +33,7 @@ const MuscleGroups = ({ navigation }) => {
                     </TouchableOpacity>
                     <TouchableOpacity
                         style={styles.groupContainer}
-                    //   onPress={addExercisesHandler}
+                        onPress={() => navigation.push('Exercise Detail', {item: 'bent over row'})}
                     >
                         <Image
                             style={styles.imageStyle}
@@ -49,7 +49,7 @@ const MuscleGroups = ({ navigation }) => {
                 >
                     <TouchableOpacity
                         style={styles.groupContainer}
-                    //   onPress={addExercisesHandler}
+                        onPress={() => navigation.push('Exercise Detail', {item: 'chin ups'})}
                     >
                         <Image
                             style={styles.imageStyle}
@@ -61,7 +61,7 @@ const MuscleGroups = ({ navigation }) => {
                     </TouchableOpacity>
                     <TouchableOpacity
                         style={styles.groupContainer}
-                    //   onPress={addExercisesHandler}
+                        onPress={() => navigation.push('Exercise Detail', {item: 'dumbbell row'})}
                     >
                         <Image
                             style={styles.imageStyle}
@@ -77,7 +77,7 @@ const MuscleGroups = ({ navigation }) => {
                 >
                     <TouchableOpacity
                         style={styles.groupContainer}
-                    //   onPress={addExercisesHandler}
+                        onPress={() => navigation.push('Exercise Detail', {item: 'lat pull down'})}
                     >
                         <Image
                             style={styles.imageStyle}
@@ -89,7 +89,7 @@ const MuscleGroups = ({ navigation }) => {
                     </TouchableOpacity>
                     <TouchableOpacity
                         style={styles.groupContainer}
-                    //   onPress={addExercisesHandler}
+                        onPress={() => navigation.push('Exercise Detail', {item: 'machine row'})}
                     >
                         <Image
                             style={styles.imageStyle}
@@ -105,7 +105,7 @@ const MuscleGroups = ({ navigation }) => {
                 >
                     <TouchableOpacity
                         style={styles.groupContainer}
-                    //   onPress={addExercisesHandler}
+                        onPress={() => navigation.push('Exercise Detail', {item: 'pendlay row'})}
                     >
                         <Image
                             style={styles.imageStyle}
@@ -117,7 +117,7 @@ const MuscleGroups = ({ navigation }) => {
                     </TouchableOpacity>
                     <TouchableOpacity
                         style={styles.groupContainer}
-                    //   onPress={addExercisesHandler}
+                        onPress={() => navigation.push('Exercise Detail', {item: 'pull ups'})}
                     >
                         <Image
                             style={styles.imageStyle}
@@ -133,7 +133,7 @@ const MuscleGroups = ({ navigation }) => {
                 >
                     <TouchableOpacity
                         style={styles.groupContainer}
-                    //   onPress={addExercisesHandler}
+                        onPress={() => navigation.push('Exercise Detail', {item: 'seated cable row'})}
                     >
                         <Image
                             style={styles.imageStyle}
@@ -145,7 +145,7 @@ const MuscleGroups = ({ navigation }) => {
                     </TouchableOpacity>
                     <TouchableOpacity
                         style={styles.groupContainer}
-                    //   onPress={addExercisesHandler}
+                        onPress={() => navigation.push('Exercise Detail', {item: 'T bar row'})}
                     >
                         <Image
                             style={styles.imageStyle}
