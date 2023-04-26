@@ -39,7 +39,8 @@ const Stack = createNativeStackNavigator();
 // const Tab = createBottomTabNavigator();
 // const baseURrl = 'http://localhost:8000/'
 
-function Exercises() {
+function Exercises({ route }) {
+  let userToken = route.params.userToken;
   return (
     <Stack.Navigator>
       <Stack.Screen
@@ -51,6 +52,7 @@ function Exercises() {
           headerTitle: 'MY EXERCISES',
           headerTitleAlign: 'center',
         }}
+        initialParams={{ userToken: userToken }}
       />
       <Stack.Screen
         name="MuscleGroups"
@@ -151,6 +153,7 @@ function Exercises() {
           headerStyle: { backgroundColor: "#2F486D", },
           headerTitleStyle: { color: '#2F486D' }
         }}
+        initialParams={{ userToken: userToken }}
       />
     </Stack.Navigator>
   );
@@ -230,15 +233,17 @@ export default function App() {
 
   const authContext = React.useMemo(
     () => ({
+      
       signIn: async (data) => {
         // In a production app, we need to send some data (usually username, password) to server and get a token
         // We will also need to handle errors if sign in failed
         // After getting token, we need to persist the token using `SecureStore` or any other encrypted storage
         // In the example, we'll use a dummy token
         try {
+          console.log(data)
           User = await client.post('/login', data);
           userToken = User.data.token
-          console.log(User.data.token)
+          // console.log(User.data)
           dispatch({ type: 'SIGN_IN', token: userToken });
         } catch (error) {
           console.log(error.message)
@@ -316,6 +321,7 @@ export default function App() {
               name="Exercises"
               component={Exercises}
               options={{ headerShown: false }}
+              initialParams={{ userToken: state.userToken }}
             />
             <Stack.Screen
               name="GymScreen"

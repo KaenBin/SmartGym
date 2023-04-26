@@ -12,7 +12,7 @@ import {
 export function GymScreen() {
     const [moisure, setMoisure] = useState('0.0');
     const [temp, setTemp] = useState('0.0');
-    const [light, setLight] = useState('0.0')
+    const [light, setLight] = useState('0')
 
     useEffect(() => {
         axios.get('https://io.adafruit.com/api/v2/tamdinhktmtk20/feeds/sensor-moisture')

@@ -59,4 +59,18 @@ userRouter.post('/login', async (request, response) => {
     .send({ token, user })
 })
 
+userRouter.get("/exercises/:token", async (request, response) => {
+  const decodedToken = jwt.decode(request.params.token, { complete: true })
+
+  if (!decodedToken) {
+    return response.status(401).json({ error: 'token decode failed' })
+  }
+
+  if (!decodedToken.payload.id) {
+    return response.status(401).json({ error: 'token not found' })
+  }
+  const user = await User.findById(decodedToken.payload.id)
+  return response.status(200).send(user.exerciseDeck)
+});
+
 module.exports = userRouter;
