@@ -59,7 +59,7 @@ export function ExercisesScreen({ route, navigation }) {
       />
       <TouchableOpacity
         style={[styles.addContainer, { marginTop: 15 }]}
-        // onPress={() => navigation.push('MuscleGroups')}
+        onPress={() => navigation.push('CounterApp')}
       >
         <Icon1 name="rightcircle" style={styles.startIcon} />
         <Text style={styles.addText}>

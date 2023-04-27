@@ -12,7 +12,7 @@ import {
   ScrollView
 } from 'react-native';
 
-const MuscleGroups = ({navigation}) => {
+export function MuscleGroups ({navigation}) {
   return (
     <SafeAreaView style={{flex: 1, backgroundColor: '#1C2B41'}}>
       <ScrollView contentContainerStyle={styles.container}>
@@ -108,8 +108,6 @@ const MuscleGroups = ({navigation}) => {
     </SafeAreaView>
   );
 };
-
-export default MuscleGroups;
 
 const styles = StyleSheet.create({
     groupContainer: {

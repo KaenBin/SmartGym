@@ -12,7 +12,7 @@ import {
     ScrollView
 } from 'react-native';
 
-const Chest = ({ navigation }) => {
+export function Chest ({ navigation }) {
     return (
         <SafeAreaView style={{backgroundColor: 'white', marginBottom: 20,}}>
             <ScrollView contentContainerStyle={styles.container}>
@@ -160,8 +160,6 @@ const Chest = ({ navigation }) => {
         </SafeAreaView>
     );
 };
-
-export default Chest;
 
 const styles = StyleSheet.create({
     groupContainer: {

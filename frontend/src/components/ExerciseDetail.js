@@ -7,7 +7,7 @@ const { width, height } = Dimensions.get('window');
 import API from '../api/api';
 import { Button } from 'react-native-elements';
 
-const ExerciseDetail = ({ navigation, route }) => {
+export function ExerciseDetail ({ navigation, route }) {
     const [exercise, setExercise] = useState([])
     const name = route.params.item;
     const token = route.params.userToken;
@@ -43,8 +43,6 @@ const ExerciseDetail = ({ navigation, route }) => {
         </SafeAreaView>
     );
 }
-
-export default ExerciseDetail
 
 const styles = StyleSheet.create({
     nameStyle: {

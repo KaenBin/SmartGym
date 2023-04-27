@@ -11,7 +11,7 @@ import {
 
 // import data from './Data';
 
-const Abs = ({ navigation }) => {
+export function Abs ({ navigation }) {
     return (
         <SafeAreaView style={{ backgroundColor: 'white', marginBottom: 20, }}>
             <ScrollView contentContainerStyle={styles.container}>
@@ -149,8 +149,6 @@ const Abs = ({ navigation }) => {
         </SafeAreaView>
     );
 };
-
-export default Abs;
 
 const styles = StyleSheet.create({
     groupContainer: {

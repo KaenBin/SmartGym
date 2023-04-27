@@ -11,28 +11,31 @@ import * as SecureStore from 'expo-secure-store';
 import client from './src/api/client'
 import axios from 'axios';
 
-import { SignInScreen, 
+import { 
+  SignInScreen, 
   SignUpScreen, 
   SplashScreen, 
   HomeScreen, 
   HistoryScreen, 
   ExercisesScreen, 
   GymScreen,
-  PersonalScreen} from './src/index';
+  PersonalScreen,
+  MuscleGroups,
+  Chest,
+  Back,
+  Biceps,
+  Triceps,
+  Shoulders,
+  Legs,
+  Abs,
+  FullBody,
+  ExerciseDetail,
+  CounterApp,
+} from './src/index';
 
 import { AuthContext } from './src/screens/utils';
-import MuscleGroups from './src/screens/Exercises/MuscleGroups'
-import Chest from './src/screens/Exercises/Chest/Chest'
-import Back from './src/screens/Exercises/Back/Back'
-import Biceps from './src/screens/Exercises/Biceps/Biceps'
-import Triceps from './src/screens/Exercises/Triceps/Triceps'
-import Shoulders from './src/screens/Exercises/Shoulders/Shoulders'
-import Legs from './src/screens/Exercises/Legs/Legs'
-import Abs from './src/screens/Exercises/Abs/Abs'
-import FullBody from './src/screens/Exercises/FullBody/FullBody'
-import ExerciseDetail from './src/components/ExerciseDetail';
 
-import { SearchBar } from './src';
+// import { SearchBar } from './src';
 
 
 const Stack = createNativeStackNavigator();
@@ -61,6 +64,17 @@ function Exercises({ route }) {
           headerStyle: { backgroundColor: "#2F486D", },
           headerTintColor: 'white',
           headerTitle: 'Choose the muscle groups',
+          headerTitleAlign: 'center',
+          headerTitleStyle: { fontWeight: '100', fontSize: 20, }
+        }}
+      />
+      <Stack.Screen
+        name="CounterApp"
+        component={CounterApp}
+        options={{
+          headerStyle: { backgroundColor: "#2F486D", },
+          headerTintColor: 'white',
+          headerTitle: 'Time Counter',
           headerTitleAlign: 'center',
           headerTitleStyle: { fontWeight: '100', fontSize: 20, }
         }}
