@@ -15,7 +15,6 @@ import {
 export function GymScreen({ navigation }) {
     const [moisure, setMoisure] = useState('0.0');
     const [temp, setTemp] = useState('0.0');
-<<<<<<< HEAD
     const [movement, setMovement] = useState('0');
     const [light, setLight] = useState("B");
     const [fan, setFan] = useState(0);
@@ -25,9 +24,6 @@ export function GymScreen({ navigation }) {
         response = await API.postKey("turnonlight", value)
         return response.data.value
     }
-=======
-    const [light, setLight] = useState('0')
->>>>>>> c174b0a4107f86071ce5d525764199ea9d1a716d
 
     useEffect(() => {
         setInterval(async () => {
