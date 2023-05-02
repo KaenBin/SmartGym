@@ -12,7 +12,7 @@ import {
     ScrollView
 } from 'react-native';
 
-const MuscleGroups = ({ navigation }) => {
+export function Biceps ({ navigation }) {
     return (
         <SafeAreaView style={{backgroundColor: 'white', marginBottom: 20,}}>
             <ScrollView contentContainerStyle={styles.container}>
@@ -21,7 +21,7 @@ const MuscleGroups = ({ navigation }) => {
                 >
                     <TouchableOpacity
                         style={styles.groupContainer}
-                    //   onPress={addExercisesHandler}
+                        onPress={() => navigation.push('Exercise Detail', {item: 'barbell curl'})}
                     >
                         <Image
                             style={styles.imageStyle}
@@ -33,7 +33,7 @@ const MuscleGroups = ({ navigation }) => {
                     </TouchableOpacity>
                     <TouchableOpacity
                         style={styles.groupContainer}
-                    //   onPress={addExercisesHandler}
+                        onPress={() => navigation.push('Exercise Detail', {item: 'cable bicep curl'})}
                     >
                         <Image
                             style={styles.imageStyle}
@@ -49,7 +49,7 @@ const MuscleGroups = ({ navigation }) => {
                 >
                     <TouchableOpacity
                         style={styles.groupContainer}
-                    //   onPress={addExercisesHandler}
+                        onPress={() => navigation.push('Exercise Detail', {item: 'dumbbell concentration curl'})}
                     >
                         <Image
                             style={styles.imageStyle}
@@ -61,7 +61,7 @@ const MuscleGroups = ({ navigation }) => {
                     </TouchableOpacity>
                     <TouchableOpacity
                         style={styles.groupContainer}
-                    //   onPress={addExercisesHandler}
+                        onPress={() => navigation.push('Exercise Detail', {item: 'dumbbell curl'})}
                     >
                         <Image
                             style={styles.imageStyle}
@@ -77,7 +77,7 @@ const MuscleGroups = ({ navigation }) => {
                 >
                     <TouchableOpacity
                         style={styles.groupContainer}
-                    //   onPress={addExercisesHandler}
+                        onPress={() => navigation.push('Exercise Detail', {item: 'hammer curl'})}
                     >
                         <Image
                             style={styles.imageStyle}
@@ -89,7 +89,7 @@ const MuscleGroups = ({ navigation }) => {
                     </TouchableOpacity>
                     <TouchableOpacity
                         style={styles.groupContainer}
-                    //   onPress={addExercisesHandler}
+                        onPress={() => navigation.push('Exercise Detail', {item: 'one arm cable bicep curl'})}
                     >
                         <Image
                             style={styles.imageStyle}
@@ -105,7 +105,7 @@ const MuscleGroups = ({ navigation }) => {
                 >
                     <TouchableOpacity
                         style={styles.groupContainer}
-                    //   onPress={addExercisesHandler}
+                        onPress={() => navigation.push('Exercise Detail', {item: 'preacher curl'})}
                     >
                         <Image
                             style={styles.imageStyle}
@@ -117,7 +117,7 @@ const MuscleGroups = ({ navigation }) => {
                     </TouchableOpacity>
                     <TouchableOpacity
                         style={styles.groupContainer}
-                    //   onPress={addExercisesHandler}
+                        onPress={() => navigation.push('Exercise Detail', {item: 'strict curl'})}
                     >
                         <Image
                             style={styles.imageStyle}
@@ -160,8 +160,6 @@ const MuscleGroups = ({ navigation }) => {
         </SafeAreaView>
     );
 };
-
-export default MuscleGroups;
 
 const styles = StyleSheet.create({
     groupContainer: {

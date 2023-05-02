@@ -9,13 +9,12 @@ import {
     ScrollView
 } from 'react-native';
 
-import data from './Data';
+// import data from './Data';
 
-const Abs = ({ navigation }) => {
-
+export function Abs ({ navigation }) {
     return (
         <SafeAreaView style={{ backgroundColor: 'white', marginBottom: 20, }}>
-            <ScrollView data={data} contentContainerStyle={styles.container}>
+            <ScrollView contentContainerStyle={styles.container}>
                 <View
                     style={styles.viewStyle}
                 >
@@ -47,7 +46,7 @@ const Abs = ({ navigation }) => {
                 >
                     <TouchableOpacity
                         style={styles.groupContainer}
-                    //   onPress={addExercisesHandler}
+                        onPress={() => navigation.push('Exercise Detail', {item: 'dumbbell side bend'})}
                     >
                         <Image
                             style={styles.imageStyle}
@@ -58,7 +57,7 @@ const Abs = ({ navigation }) => {
                     </TouchableOpacity>
                     <TouchableOpacity
                         style={styles.groupContainer}
-                    //   onPress={addExercisesHandler}
+                        onPress={() => navigation.push('Exercise Detail', {item: 'hanging knee raise'})}
                     >
                         <Image
                             style={styles.imageStyle}
@@ -73,7 +72,7 @@ const Abs = ({ navigation }) => {
                 >
                     <TouchableOpacity
                         style={styles.groupContainer}
-                    //   onPress={addExercisesHandler}
+                        onPress={() => navigation.push('Exercise Detail', {item: 'hanging leg raise'})}
                     >
                         <Image
                             style={styles.imageStyle}
@@ -84,7 +83,7 @@ const Abs = ({ navigation }) => {
                     </TouchableOpacity>
                     <TouchableOpacity
                         style={styles.groupContainer}
-                    //   onPress={addExercisesHandler}
+                        onPress={() => navigation.push('Exercise Detail', {item: 'lying leg raise'})}
                     >
                         <Image
                             style={styles.imageStyle}
@@ -99,7 +98,7 @@ const Abs = ({ navigation }) => {
                 >
                     <TouchableOpacity
                         style={styles.groupContainer}
-                    //   onPress={addExercisesHandler}
+                        onPress={() => navigation.push('Exercise Detail', {item: 'machine seated crunch'})}
                     >
                         <Image
                             style={styles.imageStyle}
@@ -110,7 +109,7 @@ const Abs = ({ navigation }) => {
                     </TouchableOpacity>
                     <TouchableOpacity
                         style={styles.groupContainer}
-                    //   onPress={addExercisesHandler}
+                        onPress={() => navigation.push('Exercise Detail', {item: 'russian twist'})}
                     >
                         <Image
                             style={styles.imageStyle}
@@ -125,7 +124,7 @@ const Abs = ({ navigation }) => {
                 >
                     <TouchableOpacity
                         style={styles.groupContainer}
-                    //   onPress={addExercisesHandler}
+                        onPress={() => navigation.push('Exercise Detail', {item: 'sit ups'})}
                     >
                         <Image
                             style={styles.imageStyle}
@@ -136,13 +135,13 @@ const Abs = ({ navigation }) => {
                     </TouchableOpacity>
                     <TouchableOpacity
                         style={styles.groupContainer}
-                    //   onPress={addExercisesHandler}
+                        onPress={() => navigation.push('Exercise Detail', {item: 'toes to bar'})}
                     >
                         <Image
                             style={styles.imageStyle}
                             source={require('../../../../assets/images/Abs/ToesToBar.jpg')} />
                         <Text style={styles.textStyle}>
-                            Toes To Bar
+                            Toes To Bar 
                         </Text>
                     </TouchableOpacity>
                 </View>
@@ -150,8 +149,6 @@ const Abs = ({ navigation }) => {
         </SafeAreaView>
     );
 };
-
-export default Abs;
 
 const styles = StyleSheet.create({
     groupContainer: {

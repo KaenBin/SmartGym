@@ -12,7 +12,7 @@ import {
     ScrollView
 } from 'react-native';
 
-const Chest = ({ navigation }) => {
+export function Chest ({ navigation }) {
     return (
         <SafeAreaView style={{backgroundColor: 'white', marginBottom: 20,}}>
             <ScrollView contentContainerStyle={styles.container}>
@@ -61,7 +61,7 @@ const Chest = ({ navigation }) => {
                     </TouchableOpacity>
                     <TouchableOpacity
                         style={styles.groupContainer}
-                    //   onPress={addExercisesHandler}
+                        onPress={() => navigation.push('Exercise Detail', {item: 'cable fly'})}
                     >
                         <Image
                             style={styles.imageStyle}
@@ -77,7 +77,7 @@ const Chest = ({ navigation }) => {
                 >
                     <TouchableOpacity
                         style={styles.groupContainer}
-                    //   onPress={addExercisesHandler}
+                        onPress={() => navigation.push('Exercise Detail', {item: 'incline fly'})}
                     >
                         <Image
                             style={styles.imageStyle}
@@ -89,13 +89,13 @@ const Chest = ({ navigation }) => {
                     </TouchableOpacity>
                     <TouchableOpacity
                         style={styles.groupContainer}
-                    //   onPress={addExercisesHandler}
+                        onPress={() => navigation.push('Exercise Detail', {item: 'dumbbell fly'})}
                     >
                         <Image
                             style={styles.imageStyle}
                             source={require('../../../../assets/images/Chest/DumbellFly.jpg')} />
                         <Text style={styles.textStyle}>
-                            Dumbell Fly
+                            Dumbbell Fly
                         </Text>
 
                     </TouchableOpacity>
@@ -105,7 +105,7 @@ const Chest = ({ navigation }) => {
                 >
                     <TouchableOpacity
                         style={styles.groupContainer}
-                    //   onPress={addExercisesHandler}
+                        onPress={() => navigation.push('Exercise Detail', {item: 'chest press'})}
                     >
                         <Image
                             style={styles.imageStyle}
@@ -117,7 +117,7 @@ const Chest = ({ navigation }) => {
                     </TouchableOpacity>
                     <TouchableOpacity
                         style={styles.groupContainer}
-                    //   onPress={addExercisesHandler}
+                        onPress={() => navigation.push('Exercise Detail', {item: 'machine fly'})}
                     >
                         <Image
                             style={styles.imageStyle}
@@ -133,7 +133,7 @@ const Chest = ({ navigation }) => {
                 >
                     <TouchableOpacity
                         style={styles.groupContainer}
-                    //   onPress={addExercisesHandler}
+                        onPress={() => navigation.push('Exercise Detail', {item: 'floor press'})}
                     >
                         <Image
                             style={styles.imageStyle}
@@ -145,7 +145,7 @@ const Chest = ({ navigation }) => {
                     </TouchableOpacity>
                     <TouchableOpacity
                         style={styles.groupContainer}
-                    //   onPress={addExercisesHandler}
+                        onPress={() => navigation.push('Exercise Detail', {item: 'spoto press'})}
                     >
                         <Image
                             style={styles.imageStyle}
@@ -160,8 +160,6 @@ const Chest = ({ navigation }) => {
         </SafeAreaView>
     );
 };
-
-export default Chest;
 
 const styles = StyleSheet.create({
     groupContainer: {

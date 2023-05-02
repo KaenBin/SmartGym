@@ -7764,6 +7764,11 @@
     "jscodeshift" "^0.13.1"
     "nullthrows" "^1.1.1"
 
+"react-native-countdown-timer-hooks@^1.0.3":
+  "integrity" "sha512-k0/1ou1qo1n1Zh3kx1v8LsrBTjrbzdqBRfxMVzOTeHqN/tVQhSp/d64FfygpFNOLxRPZk7yfv8Psx4SKqOEmRA=="
+  "resolved" "https://registry.npmjs.org/react-native-countdown-timer-hooks/-/react-native-countdown-timer-hooks-1.0.3.tgz"
+  "version" "1.0.3"
+
 "react-native-elements@^3.4.3":
   "integrity" "sha512-VtZc25EecPZyUBER85zFK9ZbY6kkUdcm1ZwJ9hdoGSCr1R/GFgxor4jngOcSYeMvQ+qimd5No44OVJW3rSJECA=="
   "resolved" "https://registry.npmjs.org/react-native-elements/-/react-native-elements-3.4.3.tgz"
@@ -7889,10 +7894,10 @@
     "postcss-value-parser" "^4.2.0"
     "styleq" "^0.1.2"
 
-"react-native@*", "react-native@>= 0.30.0", "react-native@>= 0.67", "react-native@>=0.40", "react-native@0.71.6":
-  "integrity" "sha512-gHrDj7qaAaiE41JwaFCh3AtvOqOLuRgZtHKzNiwxakG/wvPAYmG73ECfWHGxjxIx/QT17Hp37Da3ipCei/CayQ=="
-  "resolved" "https://registry.npmjs.org/react-native/-/react-native-0.71.6.tgz"
-  "version" "0.71.6"
+"react-native@*", "react-native@>= 0.30.0", "react-native@>= 0.67", "react-native@>=0.40", "react-native@0.71.7":
+  "integrity" "sha512-Id6iRLS581fJMFGbBl1jP5uSmjExtGOvw5Gvh7694zISXjsRAsFMmU+izs0pyCLqDBoHK7y4BT7WGPGw693nYw=="
+  "resolved" "https://registry.npmjs.org/react-native/-/react-native-0.71.7.tgz"
+  "version" "0.71.7"
   dependencies:
     "@jest/create-cache-key-function" "^29.2.1"
     "@react-native-community/cli" "10.2.2"

@@ -12,7 +12,7 @@ import {
     ScrollView
 } from 'react-native';
 
-const MuscleGroups = ({ navigation }) => {
+export function Shoulders ({ navigation }) {
     return (
         <SafeAreaView style={{backgroundColor: 'white', marginBottom: 20,}}>
             <ScrollView contentContainerStyle={styles.container}>
@@ -21,7 +21,7 @@ const MuscleGroups = ({ navigation }) => {
                 >
                     <TouchableOpacity
                         style={styles.groupContainer}
-                    //   onPress={addExercisesHandler}
+                        onPress={() => navigation.push('Exercise Detail', {item: 'cable lateral raise'})}
                     >
                         <Image
                             style={styles.imageStyle}
@@ -33,7 +33,7 @@ const MuscleGroups = ({ navigation }) => {
                     </TouchableOpacity>
                     <TouchableOpacity
                         style={styles.groupContainer}
-                    //   onPress={addExercisesHandler}
+                        onPress={() => navigation.push('Exercise Detail', {item: 'dumbbell front raise'})}
                     >
                         <Image
                             style={styles.imageStyle}
@@ -49,7 +49,7 @@ const MuscleGroups = ({ navigation }) => {
                 >
                     <TouchableOpacity
                         style={styles.groupContainer}
-                    //   onPress={addExercisesHandler}
+                        onPress={() => navigation.push('Exercise Detail', {item: 'dumbbell lateral raise'})}
                     >
                         <Image
                             style={styles.imageStyle}
@@ -61,7 +61,7 @@ const MuscleGroups = ({ navigation }) => {
                     </TouchableOpacity>
                     <TouchableOpacity
                         style={styles.groupContainer}
-                    //   onPress={addExercisesHandler}
+                        onPress={() => navigation.push('Exercise Detail', {item: 'face pull'})}
                     >
                         <Image
                             style={styles.imageStyle}
@@ -77,7 +77,7 @@ const MuscleGroups = ({ navigation }) => {
                 >
                     <TouchableOpacity
                         style={styles.groupContainer}
-                    //   onPress={addExercisesHandler}
+                        onPress={() => navigation.push('Exercise Detail', {item: 'machine shoulder press'})}
                     >
                         <Image
                             style={styles.imageStyle}
@@ -89,7 +89,7 @@ const MuscleGroups = ({ navigation }) => {
                     </TouchableOpacity>
                     <TouchableOpacity
                         style={styles.groupContainer}
-                    //   onPress={addExercisesHandler}
+                        onPress={() => navigation.push('Exercise Detail', {item: 'military press'})}
                     >
                         <Image
                             style={styles.imageStyle}
@@ -105,7 +105,7 @@ const MuscleGroups = ({ navigation }) => {
                 >
                     <TouchableOpacity
                         style={styles.groupContainer}
-                    //   onPress={addExercisesHandler}
+                        onPress={() => navigation.push('Exercise Detail', {item: 'push press'})}
                     >
                         <Image
                             style={styles.imageStyle}
@@ -117,7 +117,7 @@ const MuscleGroups = ({ navigation }) => {
                     </TouchableOpacity>
                     <TouchableOpacity
                         style={styles.groupContainer}
-                    //   onPress={addExercisesHandler}
+                        onPress={() => navigation.push('Exercise Detail', {item: 'shoulder press'})}
                     >
                         <Image
                             style={styles.imageStyle}
@@ -133,7 +133,7 @@ const MuscleGroups = ({ navigation }) => {
                 >
                     <TouchableOpacity
                         style={styles.groupContainer}
-                    //   onPress={addExercisesHandler}
+                        onPress={() => navigation.push('Exercise Detail', {item: 'upright row'})}
                     >
                         <Image
                             style={styles.imageStyle}
@@ -145,7 +145,7 @@ const MuscleGroups = ({ navigation }) => {
                     </TouchableOpacity>
                     <TouchableOpacity
                         style={styles.groupContainer}
-                    //   onPress={addExercisesHandler}
+                        onPress={() => navigation.push('Exercise Detail', {item: 'landmine press'})}
                     >
                         <Image
                             style={styles.imageStyle}
@@ -160,8 +160,6 @@ const MuscleGroups = ({ navigation }) => {
         </SafeAreaView>
     );
 };
-
-export default MuscleGroups;
 
 const styles = StyleSheet.create({
     groupContainer: {

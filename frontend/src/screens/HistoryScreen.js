@@ -1,5 +1,5 @@
-import React, {useState, useEffect} from 'react';
-import {Calendar} from 'react-native-calendars';
+import React, { useState, useEffect } from 'react';
+import { Calendar } from 'react-native-calendars';
 import moment from 'moment';
 
 // import all the components we are going to use
@@ -23,18 +23,31 @@ const CalendarTheme = {
   todayTextColor: 'white',
 }
 
-export function HistoryScreen ({navigation}) {
+export function HistoryScreen({ navigation }) {
   const [currentDate, setCurrentDate] = useState(moment()
-     .utcOffset('+07:00')
-     .format('YYYY-MM-DD'));
+    .utcOffset('+07:00')
+    .format('YYYY-MM-DD'));
   return (
-    <SafeAreaView style={{flex: 1, backgroundColor: '#1C2B41'}}>
-      <Calendar 
-        style={styles.calendar} 
-        enableSwipeMonths={true} 
-        theme={CalendarTheme} 
-        markedDates={
-          {[currentDate]: {selected: true, selectedColor: '#589C5F'},
+    <SafeAreaView style={{ flex: 1, backgroundColor: '#1C2B41' }}>
+      <Calendar
+        style={styles.calendar}
+        enableSwipeMonths={true}
+        theme={CalendarTheme}
+        markedDates={{
+          '2023-04-01': { selected: true, marked: true, selectedColor: '#8CADFF' },
+          '2023-04-03': { marked: true },
+          '2023-04-06': { selected: true, marked: true, selectedColor: '#8CADFF' },
+          '2023-04-07': { selected: true, marked: true, selectedColor: '#8CADFF' },
+          '2023-04-10': { marked: true },
+          '2023-04-08': { selected: true, marked: true, selectedColor: '#8CADFF' },
+          '2023-04-11': { marked: true },
+          '2023-04-14': { selected: true, marked: true, selectedColor: '#8CADFF' },
+          '2023-04-15': { selected: true, marked: true, selectedColor: '#8CADFF' },
+          '2023-04-17': { marked: true },
+          '2023-04-21': { selected: true, marked: true, selectedColor: '#8CADFF' },
+          '2023-04-23': { selected: true, marked: true, selectedColor: '#8CADFF' },
+          '2023-04-25': { selected: true, marked: true, selectedColor: '#8CADFF' },
+          [currentDate]: {selected: true, selectedColor: '#589C5F'},
           }} />
     </SafeAreaView>
   );

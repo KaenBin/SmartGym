@@ -1,43 +1,69 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+// import defineComponent from '../components/AdafruitIO';
+import API from '../api/api';
 
 import {
     SafeAreaView,
     Text,
     StyleSheet,
     View,
-    ScrollView
+    ScrollView,
+    TouchableOpacity
 } from 'react-native';
 
-export function GymScreen() {
+export function GymScreen({ navigation }) {
     const [moisure, setMoisure] = useState('0.0');
     const [temp, setTemp] = useState('0.0');
-    const [light, setLight] = useState('0.0')
+    const [movement, setMovement] = useState('0');
+    const [light, setLight] = useState("B");
+    const [fan, setFan] = useState(0);
+
+    const lightHandler = async () => {
+        const value = (light == "A") ? "B" : "A"
+        response = await API.postKey("turnonlight", value)
+        return response.data.value
+    }
 
     useEffect(() => {
-        axios.get('https://io.adafruit.com/api/v2/tamdinhktmtk20/feeds/sensor-moisture')
-            .then(response => {
-                setMoisure(response.data.last_value);
-            })
-            .catch(error => {
-                console.log(error);
-            });
-        axios.get('https://io.adafruit.com/api/v2/tamdinhktmtk20/feeds/sensor-temperature')
-            .then(response => {
-                setTemp(response.data.last_value);
-            })
-            .catch(error => {
-                console.log(error);
-            });
-        axios.get('https://io.adafruit.com/api/v2/tamdinhktmtk20/feeds/sensor-lights')
-            .then(response => {
-                setLight(response.data.last_value);
-            })
-            .catch(error => {
-                console.log(error);
-            });
-    });
-
+        setInterval(async () => {
+            await axios.get('https://io.adafruit.com/api/v2/DangLe1311/feeds/sensor-moist')
+                .then((response) => {
+                    setMoisure(response.data.last_value);
+                })
+                .catch(error => {
+                    console.log(error);
+                });
+            await axios.get('https://io.adafruit.com/api/v2/DangLe1311/feeds/sensor-temp')
+                .then(response => {
+                    setTemp(response.data.last_value);
+                })
+                .catch(error => {
+                    console.log(error);
+                });
+            await axios.get('https://io.adafruit.com/api/v2/DangLe1311/feeds/sensor-movement')
+                .then(response => {
+                    setMovement(response.data.last_value);
+                })
+                .catch(error => {
+                    console.log(error);
+                });
+            await axios.get('https://io.adafruit.com/api/v2/DangLe1311/feeds/turnonlight')
+                .then(response => {
+                    setLight(response.data.last_value)
+                })
+                .catch(error => {
+                    console.log(error);
+                });
+            await axios.get('https://io.adafruit.com/api/v2/DangLe1311/feeds/setup-fan')
+                .then(response => {
+                    setFan(response.data.last_value)
+                })
+                .catch(error => {
+                    console.log(error);
+                });
+        }, 5000)
+    }, []);
     return (
         <SafeAreaView style={{ flex: 1, backgroundColor: "#EFFEFF" }}>
             <ScrollView contentContainerStyle={styles.container}>
@@ -47,10 +73,10 @@ export function GymScreen() {
                 <View style={[styles.textRow, { margin: 2 }]}>
                     <View style={styles.textBox}>
                         <Text style={styles.textStyle1}>
-                            Temperature
+                            Temp
                         </Text>
                         <Text style={styles.textStyle1}>
-                            {temp}Â°C
+                            {temp}°C
                         </Text>
                     </View>
                     <View style={styles.textBox}>
@@ -59,6 +85,32 @@ export function GymScreen() {
                         </Text>
                         <Text style={styles.textStyle1}>
                             {moisure}%
+                        </Text>
+                    </View>
+                    <View style={styles.textBox}>
+                        <Text style={styles.textStyle1}>
+                            Gymers
+                        </Text>
+                        <Text style={styles.textStyle1}>
+                            {movement} people
+                        </Text>
+                    </View>
+                </View>
+                <View style={[styles.textRow, { margin: 2 }]}>
+                    <TouchableOpacity style={styles.textBox} onPress={() => { lightHandler() }}>
+                        <Text style={styles.textStyle1}>
+                            Light
+                        </Text>
+                        <Text style={styles.textStyle1}>
+                            {(light == "A") ? "On" : "Off"}
+                        </Text>
+                    </TouchableOpacity>
+                    <View style={styles.textBox}>
+                        <Text style={styles.textStyle1}>
+                            Fan
+                        </Text>
+                        <Text style={styles.textStyle1}>
+                            {fan}
                         </Text>
                     </View>
                 </View>
