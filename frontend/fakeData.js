@@ -349,168 +349,168 @@
     },
 
     {
-        "id": "50",
+        "id": "51",
         "name": "leg extension",
-        "desc": "1.Adjust the machine: Adjust the seat so that your knees align with the pivot point of the machine. Adjust the footpad so that it rests just above your feet.\n\n2.Sit on the machine: Sit on the machine with your back flat against the backrest and your feet under the footpad.\n\n3.Set the weight: Choose a weight that you can lift comfortably, and adjust the weight stack accordingly.\n\n4.Lift the weight: Extend your legs and lift the weight until your legs are almost straight. Avoid locking your knees.\n\n5.Lower the weight: Slowly lower the weight back down to the starting position, keeping your movements controlled.\n\n6.Repeat for the desired number of repetitions.",
+        "desc": "1.Adjust the seat so that your knees align with the pivot point of the machine. Adjust the footpad so that it rests just above your feet.\n\n2.Sit on the machine with your back flat against the backrest and your feet under the footpad.\n\n3.Choose a weight that you can lift comfortably, and adjust the weight stack accordingly.\n\n4.Extend your legs and lift the weight until your legs are almost straight. Avoid locking your knees.\n\n5.Slowly lower the weight back down to the starting position, keeping your movements controlled.\n\n6.Repeat for the desired number of repetitions.",
         "category": "legs"
     },
 
     {
-        "id": "51",
+        "id": "52",
         "name": "lying leg curl",
         "desc": "1.Lie face down on a lying leg curl machine and adjust the machine so that the pad rests just above your heels.\n\n2.Grab onto the handles at the front of the machine for support.\n\n3.Keeping your hips down on the bench, exhale and curl your legs up towards your buttocks as far as you can go.\n\n4.Hold the contraction for a second or two and then inhale as you slowly lower the weight back down to the starting position.\n\n5.Repeat for the desired number of repetitions.",
         "category": "legs"
     },
 
     {
-        "id": "52",
+        "id": "53",
         "name": "machine calf raise",
         "desc": "1.Adjust the machine so that the shoulder pads are comfortably resting on your shoulders, and the balls of your feet are on the footplate.\n\n2.Choose an appropriate weight for your fitness level and goals.\n\n3.Keeping your core tight and your legs straight, lift your heels as high as possible, contracting your calf muscles. Hold this position for a second, then lower your heels back down until your calves are fully stretched.\n\n4.Repeat the exercise for the desired number of reps and sets.",
         "category": "legs"
     },
 
     {
-        "id": "53",
+        "id": "54",
         "name": "sled leg press",
         "desc": "1.Start by adjusting the weight on the sled to a comfortable level.\n\n2.Sit on the machine with your back flat against the backrest and your feet on the sled. Your feet should be shoulder-width apart and placed about halfway up the sled.\n\n3.Grasp the handles on either side of the seat and press them firmly to engage your upper body muscles.\n\n4.Push the sled forward by extending your legs until they are almost fully straightened, but not locked out.\n\n5.Pause briefly and then slowly lower the sled back down by bending your knees and hips until your knees are at a 90-degree angle.\n\n6.Repeat the movement for the desired number of repetitions.",
         "category": "legs"
     },
 
     {
-        "id": "54",
+        "id": "55",
         "name": "squat",
         "desc": "1.Stand with your feet shoulder-width apart, with your toes pointing slightly outwards.\n\n2.Engage your core and keep your chest up, with your shoulder blades pulled back.\n\n3.Lower your body by bending at the knees and hips, as if you are sitting on a chair.\n\n4.Keep your knees in line with your toes and your weight on your heels.\n\n5.Descend until your thighs are parallel to the ground, or until your mobility allows.\n\n6.Drive through your heels and extend your legs to return to the starting position.\n\n7.Repeat the movement for the desired number of repetitions.",
         "category": "legs"
     },
 
     {
-        "id": "55",
+        "id": "56",
         "name": "pistol squat",
         "desc": "1.Begin by standing with your feet hip-width apart and your arms extended in front of you.\n\n2.Shift your weight onto your left foot and lift your right foot off the ground.\n\n3.Slowly lower your body down by bending your left knee and pushing your hips back. Keep your right leg extended in front of you as you lower your body down.\n\n4.Lower your body as far as you can while maintaining your balance and keeping your right leg extended.\n\n5.Push through your left foot to stand back up to the starting position.\n\n6.Repeat on the other side.",
         "category": "legs"
     },
 
     {
-        "id": "56",
+        "id": "57",
         "name": "ab wheel rollout",
         "desc": "1.Begin in a kneeling position on a mat, with your hands on the ab wheel handles and your arms fully extended.\n\n2.Engage your core and slowly roll the wheel forward, keeping your abs tight and your back straight. As you roll out, your arms will extend in front of you.\n\n3.Continue rolling the wheel out until you feel a stretch in your abs and you are as far forward as you can go without losing proper form.\n\n4.Pause for a moment, then slowly roll the wheel back towards your knees, keeping your abs tight and your back straight.\n\n5.Repeat for the desired number of reps.",
         "category": "abs"
     },
 
     {
-        "id": "57",
+        "id": "58",
         "name": "cable crunch",
         "desc": "1.Attach a rope handle to a high cable pulley and kneel in front of it facing away from the machine.\n\n2.Grasp the rope handle with both hands and place your hands on the back of your head.\n\n3.With your hips stationary, flex your spine and crunch your torso down towards your knees.\n\n4.Pause briefly at the bottom of the movement, then slowly return to the starting position.\n\n5.Repeat for the desired number of reps.",
         "category": "abs"
     },
 
     {
-        "id": "58",
+        "id": "59",
         "name": "dumbbell side bend",
         "desc": "1.Stand straight with your feet shoulder-width apart, and hold a dumbbell in one hand, with the other hand placed on your waist.\n\n2.Keeping your back straight and your core engaged, slowly lower the dumbbell towards your side, bending at the waist.\n\n3.As you lower the weight, exhale and contract your oblique muscles.\n\n4.As you lower the weight, exhale and contract your oblique muscles.\n\n5.Repeat for the desired number of repetitions, and then switch sides.",
         "category": "abs"
     },
 
     {
-        "id": "59",
+        "id": "60",
         "name": "hanging knee raise",
         "desc": "1.Hang from a pull-up bar or other stable structure with your palms facing forward and your arms extended.\n\n2.Engage your core muscles and bring your knees up toward your chest, keeping your legs together.\n\n3.Pause at the top of the movement and squeeze your abs.\n\n4.Slowly lower your legs back down to the starting position, keeping them under control.",
         "category": "abs"
     },
 
     {
-        "id": "60",
+        "id": "61",
         "name": "hanging leg raise",
         "desc": "1.Hang from a pull-up bar with your palms facing away from you, and your feet off the ground.\n\n2.Engage your core muscles by contracting your abs and slightly tilting your pelvis upward.\n\n3.Keeping your legs straight, lift them up in front of you until they are parallel to the ground. Keep your knees and feet together throughout the movement.\n\n4.Hold the contraction for a second and then slowly lower your legs back to the starting position.\n\n5.Repeat for the desired number of repetitions.",
         "category": "abs"
     },
 
     {
-        "id": "61",
+        "id": "62",
         "name": "lying leg raise",
         "desc": "1.Lie flat on your back with your legs extended.\n\n2.Place your hands at your sides or under your lower back for support.\n\n3.Slowly raise your legs off the ground, keeping them straight and together, until they are at a 90-degree angle with your torso.\n\n4.Pause for a moment and then slowly lower your legs back down to the starting position.\n\n5.Repeat for the desired number of repetitions.",
         "category": "abs"
     },
 
     {
-        "id": "62",
+        "id": "63",
         "name": "machine seated crunch",
         "desc": "1.Adjust the seat of the machine so that your feet can comfortably reach the footpads. Sit on the machine with your back against the pad.\n\n2.Grasp the handles with both hands and bring them to your shoulders.\n\n3.Exhale and slowly crunch your torso forward while contracting your abs. Pause at the top of the movement, and then slowly lower your torso back down to the starting position while inhaling.\n\n4.Repeat for the desired number of repetitions.",
         "category": "abs"
     },
 
     {
-        "id": "63",
+        "id": "64",
         "name": "Russian twist",
         "desc": "1.Sit on the floor with your knees bent and your feet flat on the ground.\n\n2.Lean back slightly and lift your feet off the ground, so your shins are parallel to the floor.\n\n3.Hold a weight, such as a dumbbell or medicine ball, with both hands, and extend your arms in front of you.\n\n4.Twist your torso to the right, bringing the weight to your right side. Keep your arms straight throughout the movement.\n\n5.Twist your torso to the left, bringing the weight to your left side. This completes one repetition.\n\n6.Continue twisting from side to side for the desired number of repetitions or time.",
         "category": "abs"
     },
 
     {
-        "id": "64",
+        "id": "65",
         "name": "sit ups",
         "desc": "1.Lie on your back on a mat or soft surface with your knees bent and your feet flat on the ground.\n\n2.Cross your arms across your chest or place your hands behind your head, but be careful not to pull on your neck.\n\n3.Engage your core muscles and use them to lift your upper body off the ground and towards your knees.\n\n4.Exhale as you reach the top of the movement and squeeze your abs.\n\n5.Inhale as you slowly lower your body back down to the starting position, keeping your core engaged throughout the movement.\n\n6.Repeat for your desired number of repetitions.",
         "category": "abs"
     },
 
     {
-        "id": "65",
+        "id": "66",
         "name": "toes to bar",
         "desc": "1.Stand in front of a pull-up bar, jump up, and grab the bar with an overhand grip that is slightly wider than shoulder-width apart.\n\n2.Hang from the bar with straight arms, engage your core muscles, and keep your shoulders back and down.\n\n3.Lift your legs up, keeping them straight, until they are parallel to the ground.\n\n4.Without pausing, continue to lift your legs up towards the bar by flexing at the hips and pulling with your abs, until your toes touch the bar.\n\n5.Slowly lower your legs back down to the starting position, with control.\n\n6.Repeat for your desired number of repetitions.",
         "category": "abs"
     },
 
     {
-        "id": "66",
+        "id": "67",
         "name": "burpees",
         "desc": "1.Stand with your feet shoulder-width apart and your arms at your sides.\n\n2.Squat down and place your hands on the ground in front of you.\n\n3.Kick your legs back so you are in a push-up position.\n\n4.Do a push-up.\n\n5.Jump your feet back towards your hands so you are back in the squatting position.\n\n6.Jump up with your arms over your head.\n\n7.Repeat for your desired number of repetitions.",
         "category": "full body"
     },
 
     {
-        "id": "67",
+        "id": "68",
         "name": "deadlift",
         "desc": "1.Start with your feet hip-width apart and the barbell on the ground in front of you.\n\n2.Bend down and grab the bar with your hands shoulder-width apart, palms facing down.\n\n3.Lower your hips until your shins touch the bar.\n\n4.Tighten your core and lift the bar, driving your heels into the ground and standing up tall.\n\n5.Keep your back straight and your shoulders back as you lift.\n\n6.Once you are standing upright with the bar in your hands, slowly lower it back to the ground by bending at the hips and knees.\n\n7.Repeat for your desired number of repetitions.",
         "category": "full body"
     },
 
     {
-        "id": "68",
+        "id": "69",
         "name": "dumbbell deadlift",
         "desc": "1.Stand with your feet shoulder-width apart, with a dumbbell in each hand.\n\n2.Bend at the hips and knees to lower the dumbbells to the ground, keeping your back straight and your chest up.\n\n3.Once the dumbbells touch the ground, push through your heels and stand up straight, keeping your back straight and your chest up.\n\n4.Lower the dumbbells back to the ground with control and repeat for the desired number of repetitions.",
         "category": "full body"
     },
 
     {
-        "id": "69",
+        "id": "70",
         "name": "dumbbell snatch",
         "desc": "1.Stand with your feet shoulder-width apart and a dumbbell on the floor in front of you.\n\n2.Squat down and grab the dumbbell with your right hand, palm facing your body.\n\n3.Stand up explosively, pulling the dumbbell up as you rise.\n\n4.As the dumbbell reaches chest level, rotate your hand so that your palm faces outward.\n\n5.Push the dumbbell overhead, extending your arm fully.\n\n6.Lower the dumbbell back down to the starting position, reversing the movement.\n\n7.Repeat for the desired number of reps, then switch to your left hand and repeat the movement.",
         "category": "full body"
     },
 
     {
-        "id": "70",
+        "id": "71",
         "name": "power clean",
         "desc": "1.Set up the barbell on the floor with the appropriate weight.\n\n2.Stand with your feet shoulder-width apart and toes under the barbell.\n\n3.Bend down to grip the bar with your hands slightly wider than shoulder-width apart, using an overhand grip.\n\n4.Keep your back straight, chest up, and head facing forward.\n\n5.Lift the bar off the ground with explosive power using your legs, hips, and back muscles.\n\n6.As the bar reaches your knees, quickly extend your hips and knees to create momentum and pull the bar up to your shoulders.\n\n7.Drop your body under the bar and catch it at shoulder level, with your elbows pointing forward.\n\n8.Stand up straight and hold the bar in front of your shoulders.\n\n9.Lower the bar back down to the starting position, with control and good form.\n\n10.Repeat the movement for the desired number of repetitions.",
         "category": "full body"
     },
 
     {
-        "id": "71",
+        "id": "72",
         "name": "rack pull",
         "desc": "1.Set the barbell on the supports of a power rack at a height that is just below your knee level.\n\n2.Stand in front of the bar with your feet shoulder-width apart.\n\n3.Bend your knees slightly and hinge at your hips to reach down and grab the bar with an overhand or mixed grip.\n\n4.Take a deep breath, brace your core, and lift the bar off the rack by standing up, driving your hips forward and pulling your shoulders back.\n\n5.Pause briefly at the top of the lift, then slowly lower the bar back down to the rack by reversing the movement.\n\n6.Repeat the movement for the desired number of repetitions.",
         "category": "full body"
     },
 
     {
-        "id": "72",
+        "id": "73",
         "name": "single leg dumbbell deadlift",
         "desc": "1.Stand with your feet hip-width apart, holding a dumbbell in your right hand at arm's length by your side.\n\n2.Shift your weight onto your left leg, and lift your right foot off the ground behind you, keeping your knee slightly bent.\n\n3.Keeping your back straight, hinge forward at the hips, lowering the dumbbell towards the ground, while simultaneously lifting your right leg behind you, so that your torso and leg are parallel to the ground.\n\n4.Pause briefly at the bottom of the movement, then engage your glutes and hamstrings to lift your torso and right leg back up to the starting position.\n\n5.Repeat for the desired number of repetitions on your right leg, then switch to your left leg and repeat the exercise.",
         "category": "full body"
     },
 
     {
-        "id": "73",
+        "id": "74",
         "name": "sumo deadlift",
         "desc": "1.Stand with your feet shoulder-width apart, toes pointed out at a 45-degree angle.\n\n2.Place your hands on the barbell, inside your legs, with a narrow grip.\n\n3.Squat down, keeping your back straight and your chest up, until your thighs are parallel to the ground.\n\n4.Drive through your legs, pushing your hips forward and lifting the bar off the ground.\n\n5.As you lift the bar, keep your back straight and your chest up, and focus on pulling the bar straight up towards your hips.\n\n6.Lower the bar back down to the ground, again keeping your back straight and your chest up.\n\n7.Repeat for the desired number of reps.",
         "category": "full body"

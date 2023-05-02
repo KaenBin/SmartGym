@@ -1,5 +1,8 @@
 import client from "./client"
+<<<<<<< HEAD
 import axios from "axios"
+=======
+>>>>>>> c174b0a4107f86071ce5d525764199ea9d1a716d
 
 const getSingle = async (name) => {
     try {
@@ -18,7 +21,11 @@ const getAll = async (token) => {
 }
 
 const addSingle = async (token, name) => {
+<<<<<<< HEAD
     data = { "token": token, "name": name }
+=======
+    data = { "token": token, "name": name}
+>>>>>>> c174b0a4107f86071ce5d525764199ea9d1a716d
     try {
         return await client.post('/MyExercise/add-exercise', data).then((response) => { return response })
     } catch (error) {
@@ -27,14 +34,21 @@ const addSingle = async (token, name) => {
 }
 
 const removeSingle = async (token, name) => {
+<<<<<<< HEAD
     data = { "token": token, "name": name }
     try {
         return await client.delete('/MyExercise/delete-exercise', { data: data }).then((response) => { return response })
+=======
+    data = { "token": token, "name": name}
+    try {
+        return await client.delete('/MyExercise/delete-exercise', {data: data}).then((response) => { return response })
+>>>>>>> c174b0a4107f86071ce5d525764199ea9d1a716d
     } catch (error) {
         console.log('error while getting exercise', error)
     }
 }
 
+<<<<<<< HEAD
 const postKey = async (name, value) => {
     const data = {
         "datum": {
@@ -58,3 +72,6 @@ const postKey = async (name, value) => {
 }
 
 export default { getAll, getSingle, addSingle, removeSingle, postKey }
+=======
+export default { getAll, getSingle, addSingle, removeSingle }
+>>>>>>> c174b0a4107f86071ce5d525764199ea9d1a716d

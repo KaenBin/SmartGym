@@ -93,7 +93,7 @@ export function Chest ({ navigation }) {
                     >
                         <Image
                             style={styles.imageStyle}
-                            source={require('../../../../assets/images/Chest/DumbellFly.jpg')} />
+                            source={require('../../../../assets/images/Chest/DumbbellFly.jpg')} />
                         <Text style={styles.textStyle}>
                             Dumbbell Fly
                         </Text>

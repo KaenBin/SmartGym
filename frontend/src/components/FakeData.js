@@ -20,7 +20,7 @@ const images = [
     },
 
     {
-        image: require('../../assets/images/Chest/DumbellFly.jpg')
+        image: require('../../assets/images/Chest/DumbbellFly.jpg')
     },
 
     {
